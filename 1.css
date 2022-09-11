@@ -4,10 +4,10 @@
 :root{
     /*======== Main theme colors ========*/
     --first-color: #0e2431;
-    --second-color: #64c66a;
+    --second-color: #6a59d1;
     --third-color: #777;
     /*======== Hover colors ========*/
-    --hover-color:#3b9e41;
+    --hover-color:#614fd0;
     /*=========== Background color ========*/
     --body-bg-color: #fefefe;
     --card-bg-color: #fff;
@@ -269,6 +269,7 @@ header.sticky .nav-bar{
     padding: 20px 30px;
     letter-spacing: 1px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .btn:hover{
@@ -373,7 +374,7 @@ header.sticky .nav-bar{
 
 .about-img img{
     max-width: 100%;
-    min-width: 500px;
+    min-width: 300px;
     border-radius: 10px;
 }
 
