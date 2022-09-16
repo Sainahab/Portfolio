@@ -808,6 +808,7 @@ header.sticky .nav-bar{
     box-shadow: var(--box-shadow);
     transform: translateY(-50px);
     transition: .5s ease;
+    text-align: center;
 }
 
 .portfolio-model.active .portfolio-model-body{
