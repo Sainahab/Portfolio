@@ -278,7 +278,7 @@ header.sticky .nav-bar{
 }
 
 .about-info .btn:hover {
-    -webkit-transform: scale(1.5, 1.5);
+    -webkit-transform: scale(1.1, 1.1);
     transform: scale(110%);
     transition: 0.25s;
 }
@@ -289,12 +289,10 @@ header.sticky .nav-bar{
     
 }
 
-.home-container .home-img{
-    position: ;
-}
 
 .home-container .home-img img{
-    width: 100%;
+    width: 380px;
+    height: 430px;
     transform: translate(0, 0);
 }
 
@@ -415,12 +413,12 @@ header.sticky .nav-bar{
     color: var(--third-color);
     font-size: var(--normal-font-size);
     margin-bottom: 15px;
-    padding-bottom: 25px;
 }
 
 .about-info .professional-list{
     display: flex;
     column-gap: 30px;
+    justify-content: center;
 }
 
 .about-info .professional-list .list-item h3{
@@ -1195,7 +1193,7 @@ footer a{
         position: absolute;
         width: 150px;
         height: 150px;
-
+         }
 .swiper {
     height: 300px;
 }
@@ -1204,3 +1202,4 @@ footer a{
     justify-content: center;
     align-items: center;
 }
+ }
