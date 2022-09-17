@@ -207,6 +207,10 @@ header.sticky .nav-bar{
     display: none;
 }
 
+.nav-close-btn {
+    visibility: hidden;
+}
+
 /*==========Home Section=========*/
 .home{
     position: relative;
@@ -1112,6 +1116,10 @@ footer a{
     cursor: pointer;
  }
 
+ .nav-close-btn {
+    visibility: visible;
+}    
+
  .nav-menu-btn{
     background: url(images/menu-btn.png)no-repeat;
     filter: var(--color-filter);
@@ -1149,7 +1157,7 @@ footer a{
         width: 500px;
     }
 
-    
+   
     /*=======Home section=======*/
     h3 , h4 , .service-card{
         text-align: center;
