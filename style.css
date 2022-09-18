@@ -1241,7 +1241,18 @@ footer a{
         align-items: center;
     }
 
-    
+    .about.group {
+        order: 1;
+    }
+
+    .follow.group {
+        order: 2;
+    }
+
+    .footer-copyright.group {
+        order: 3;
+    }
+
     .swiper {
         height: 300px;
     }
