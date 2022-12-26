@@ -465,6 +465,25 @@
          <h2 class="section-title-02">Portfolio</h2>
          <div class="content">
              <div class="portfolio-list">
+                <div class="img-card-container">
+                    <div class="img-card">
+                        <div class="overlay"></div>
+                        <div class="info">
+                            <h3>Signworks S.A.R.L</h3>
+                            <h3>IT Agency</h3>
+                            <span>https://signworks.ma/</span>
+                        </div>
+                        <img src="images/logo_square.png" alt="Signworks creative media Image">
+                    </div>
+                    <div class="portfolio-model flex-center">
+                        <div class="portfolio-model-body">
+                            <i class="fas fa-times portfolio-close-btn"></i>
+                            <h3>Signworks : Creative Media <br> IT Agency</h3>
+                            <img src="images/signworks.png" alt="Signworks creative media Image">
+                            <a href="https://signworks.ma/" target="_blank" class="btn">Visit</a>
+                        </div>
+                    </div>
+                </div>
                  <div class="img-card-container">
                      <div class="img-card">
                          <div class="overlay"></div>
@@ -480,10 +499,11 @@
                              <i class="fas fa-times portfolio-close-btn"></i>
                              <h3>Tamimi & CO <br> Law Firm</h3>
                              <img src="images/website1.png" alt="website 1 Image">
-                             <a href="http://www.tamimi.com " target="_blank" class="btn">Visite</a>
+                             <a href="http://www.tamimi.com " target="_blank" class="btn">Visit</a>
                          </div>
                      </div>
                  </div>
+                 
                  <div class="img-card-container">
                     <div class="img-card">
                         <div class="overlay"></div>
@@ -499,7 +519,7 @@
                             <i class="fas fa-times portfolio-close-btn"></i>
                             <h3>Nifty Souq (crypto marketplace)</h3>
                             <img src="images/website2b.png" alt="website 2 Image">
-                            <a href="https://www.niftysouq.com/" target="_blank" class="btn">Visite</a>
+                            <a href="https://www.niftysouq.com/" target="_blank" class="btn">Visit</a>
                         </div>
                     </div>
                 </div>
@@ -518,7 +538,7 @@
                             <i class="fas fa-times portfolio-close-btn"></i>
                             <h3>Ally sbar <br> Nutrition and Fitness Expert</h3>
                             <img src="images/website3b.png" alt="windows 3 Image">
-                            <a href="https://www.allysbar.com/" target="_blank" class="btn">Visite</a>
+                            <a href="https://www.allysbar.com/" target="_blank" class="btn">Visit</a>
                         </div>
                     </div>
                 </div>
@@ -537,7 +557,7 @@
                             <i class="fas fa-times portfolio-close-btn"></i>
                             <h3>E-cater <br> Caterer and Event Planer</h3>
                             <img src="images/website4b.png" alt="website 4 Image">
-                            <a href="https://ecater.io" target="_blank" class="btn">Visite</a>
+                            <a href="https://ecater.io" target="_blank" class="btn">Visit</a>
                         </div>
                     </div>
                 </div>
@@ -556,7 +576,7 @@
                             <i class="fas fa-times portfolio-close-btn"></i>
                             <h3>benchad parfum <br> Parfum Shop</h3>
                             <img src="images/website5b.png" alt="website 5 Image">
-                            <a href="https://www.benchadparfum.shop" target="_blank" class="btn">Visite</a>
+                            <a href="https://www.benchadparfum.shop" target="_blank" class="btn">Visit</a>
                         </div>
                     </div>
                 </div>
@@ -576,7 +596,7 @@
                             <h3>Tamimi Global Group </h3>
                             <h3>3Maintenance and services</h3>
                             <img src="images/website6b.png" alt="website 6 image">
-                            <a href="https://tamimigroup.com.sa/" target="_blank" class="btn">Visite</a>                        </div>
+                            <a href="https://tamimigroup.com.sa/" target="_blank" class="btn">Visit</a>                        </div>
                     </div>
                 </div>
              </div>
@@ -623,16 +643,23 @@
              </div>
              <div class="contact-right">
                  <p>I'm always open to discussing products<br><span>design work, collaborations or partnerships.</span></p>
-                 <form action="https://formspree.io/f/mnqrpzzy" method="POST" class="contact-form">
+                 <form action="contact.php" method="POST" class="contact-form">
+
+                    <div class="messages"></div>
+
                         <div class="first-row">
-                            <input type="text" name="Name" placeholder="Name">
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                                    <div class="help-block with-errors"></div>
                         </div>
                     <div class="second-row">
-                         <input type="email" name="Email" placeholder="Email">
-                         <input type="text" name="Subject" placeholder="Subject">
+                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                        <div class="help-block with-errors"></div>
+                        <input id="form_subject" type="text" name="subject" class="form-control" placeholder="Please enter your subject*" required="required" data-error="Valid subject is required.">
+                                    <div class="help-block with-errors"></div>
                     </div>
                     <div class="third-row">
-                         <textarea name="message" id="" rows="7" placeholder="Message"></textarea>
+                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="7" required="required" data-error="Please, leave us a message."></textarea>
+                        <div class="help-block with-errors"></div>
                     </div>
                     <button class="btn" type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
                  </form>
@@ -669,6 +696,9 @@
 
     <!---======External Script=======--->
     <script src="script.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/validator.min.js"></script>
+    <script src="js/contact.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script>
