@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="glide.core.min.css">
     <link rel="stylesheet" href="glide.theme.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NRFQJN4SK4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NRFQJN4SK4');
+</script>
+
 </head>
 <body>
 
@@ -643,18 +655,17 @@
              </div>
              <div class="contact-right">
                  <p>I'm always open to discussing products<br><span>design work, collaborations or partnerships.</span></p>
-                 <form action="contact.php" method="POST" class="contact-form">
-
-                    <div class="messages"></div>
+            
+                <form id="contact-form" method="post" action="contact.php" role="form" class="contact-form">
 
                         <div class="first-row">
-                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your Name *" required="required" data-error="Firstname is required.">
                                     <div class="help-block with-errors"></div>
                         </div>
                     <div class="second-row">
-                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your Email *" required="required" data-error="Valid email is required.">
                         <div class="help-block with-errors"></div>
-                        <input id="form_subject" type="text" name="subject" class="form-control" placeholder="Please enter your subject*" required="required" data-error="Valid subject is required.">
+                        <input id="form_subject" type="text" name="subject" class="form-control" placeholder="Please enter your Subject*" required="required" data-error="Valid subject is required.">
                                     <div class="help-block with-errors"></div>
                     </div>
                     <div class="third-row">
@@ -662,6 +673,7 @@
                         <div class="help-block with-errors"></div>
                     </div>
                     <button class="btn" type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
+                    <div class="messages"></div>
                  </form>
              </div>
          </div>
@@ -695,12 +707,15 @@
  </footer>
 
     <!---======External Script=======--->
-    <script src="script.js"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/validator.min.js"></script>
     <script src="js/contact.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script>
         const config = {
             type : "carousel",

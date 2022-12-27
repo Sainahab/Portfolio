@@ -1262,3 +1262,21 @@ footer a{
         align-items: center;
     }
 }
+
+.alert.alert-success.alert-dismissable {
+    padding: 5px;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin: 10px 0 -60px 0;
+    background-color: var(--second-color);
+    color: white;
+    text-align: center;
+}
+
+.close {
+    margin-right: 5px;
+    border: none;
+    background-color: #b6b1b100;
+    font-size: larger;
+    color: white;
+  }
