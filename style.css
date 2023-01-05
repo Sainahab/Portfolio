@@ -243,6 +243,9 @@ header.sticky .nav-bar{
 
 .home-container .media-icons a:hover{
     color: var(--hover-color);
+    transform: scale(1.5) !important;
+    transition: 0.2s ease-in-out !important;
+    
 }
 
 .home-container .info h2{
@@ -1051,7 +1054,33 @@ footer a{
 
 .footer-container .follow a{
     font-size: 1.5em;
-    margin: 20px;
+    margin: 10px;  
+}
+.footer-container .fab:hover{
+    transform: scale(1.5) !important;
+    transition: 0.2s ease-in-out !important;  
+}
+
+.media-icons a:hover:nth-child(1){
+    color: blue;
+}
+.media-icons a:hover:nth-child(2){
+    color: palevioletred;
+}
+.media-icons a:hover:nth-child(3){
+    color: rgb(101, 146, 228);
+}
+.media-icons a:hover:nth-child(4){
+    color: rgb(21, 21, 227);
+}
+.media-icons a:hover:nth-child(5){
+    color: purple;
+}
+.media-icons a:hover:nth-child(6){
+    color: yellow;
+}
+.media-icons a:hover:nth-child(7){
+    color: rgb(9, 177, 29);
 }
 
 .footer-copyright p{
