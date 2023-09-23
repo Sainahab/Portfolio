@@ -27,28 +27,8 @@ modalCloseBtns.forEach((modalCloseBtn) => {
     });
 });
 
-//Portfolio Section Modal
-const portfolioModals = document.querySelectorAll(".portfolio-model");
-const imgCards = document.querySelectorAll(".img-card");
-const portfolioCloseBtns = document.querySelectorAll(".portfolio-close-btn");
 
-var portfolioModal = function(modalClick){
-    portfolioModals[modalClick].classList.add("active");
-}
 
-imgCards.forEach((imgCard, i) => {
-    imgCard.addEventListener("click", () => {
-        portfolioModal(i);
-    });
-});
-
-portfolioCloseBtns.forEach((portfolioCloseBtn) => {
-    portfolioCloseBtn.addEventListener("click", () => {
-        portfolioModals.forEach((portfolioModalView) => {
-            portfolioModalView.classList.remove("active");
-        });
-    });
-});
 
 //Our Client - swiper
 
@@ -119,7 +99,7 @@ window.addEventListener("scroll", () => {
         }
     });
 });
-//Responsive navigation menu toggle
+// Responsive navigation menu toggle
 const menuBtn = document.querySelector(".nav-menu-btn");
 const closeBtn = document.querySelector(".nav-close-btn");
 const navigation = document.querySelector(".navigation");
@@ -130,4 +110,20 @@ menuBtn.addEventListener("click", () => {
 
 closeBtn.addEventListener("click", () => {
     navigation.classList.remove("active");
+});
+
+// Close the menu when clicking on any menu item
+const menuItems = document.querySelectorAll(".navigation a");
+
+menuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+        navigation.classList.remove("active");
+    });
+});
+
+// Close the menu when clicking outside of it
+document.addEventListener("click", (event) => {
+    if (!navigation.contains(event.target) && event.target !== menuBtn) {
+        navigation.classList.remove("active");
+    }
 });

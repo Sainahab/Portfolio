@@ -444,21 +444,21 @@ header.sticky .nav-bar{
 }
 
 /*=========Skills Section============*/
-.skills .container .content{
+.skills .container .content {
     width: 100%;
 }
 
-.skills-description{
+.skills-description {
     max-width: 700px;
     margin-bottom: 50px;
 }
 
-.skills-description h3{
+.skills-description h3 {
     font-size: 2em;
     margin-bottom: 5px;
 }
 
-.skills-info{
+.skills-info {
     max-width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -466,11 +466,11 @@ header.sticky .nav-bar{
     margin: 0 auto;
 }
 
-.skills-info h4{
+.skills-info h4 {
     margin-bottom: 20px;
 }
 
-.skills-info label{
+.skills-info label {
     background: var(--second-color);
     color: #fff;
     font-size: var(--normal-font-size);
@@ -479,11 +479,11 @@ header.sticky .nav-bar{
     border-radius: 5px;
 }
 
-.education-all{
+.education-all {
     margin-bottom: 80px;
 }
 
-.edu-list .item{
+.edu-list .item {
     background: var(--card-bg-color);
     box-shadow: var(--box-shadow);
     border-bottom: 3px solid var(--second-color);
@@ -493,80 +493,57 @@ header.sticky .nav-bar{
     transition: .3s ease;
 }
 
-.edu-list .item .year{
+.edu-list .item .year {
     font-size: var(--small-font-size);
     margin-bottom: 5px;
 }
 
-.edu-list .item p{
+.edu-list .item p {
     color: var(--third-color);
     font-size: var(--small-font-size);
 }
 
-.edu-list .item p span{
+.edu-list .item p span {
     color: var(--first-color);
     font-size: var(--normal-font-size);
     font-weight: 500;
 }
 
-.bar{
+.skills .skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.skills .skill {
     background: var(--card-bg-color);
     box-shadow: var(--box-shadow);
-    margin-bottom: 10px;
-    padding: 25px;
+    border-bottom: 3px solid var(--second-color);
+    padding: 20px;
+    margin-bottom: 15px;
     border-radius: 6px;
     transition: .3s ease;
-}
-
-.bar .info{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 5px;
-    font-size: var(--small-font-size);
-}
-
-.bar .info span{
-    font-weight: 500;
-}
-
-.bar .line{
-    position: relative;
     width: 100%;
-    height: 7px;
-    background: #c5cadf;
-    border-radius: 2px;
 }
 
-.bar .line:before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: var(--second-color);
-    border-radius: 2px;
+.skills .skill span {
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
-.bar .html:before{
-    width: 95%;
+.skills .skill span:nth-child(1) {
+    color: var(--second-color);
+    font-weight: bolder;
+    font-size: larger;
 }
 
-.bar .css:before{
-    width: 85%;
-}
 
-.bar .javascript:before{
-    width: 80%;
-}
-
-.bar .python:before{
-    width: 80%;
-}
-
-.bar .php:before{
-    width: 50%;
-}
 
 .experience-card{
     background: var(--card-bg-color);
@@ -603,7 +580,7 @@ header.sticky .nav-bar{
     margin: 10px 0 22px;
 }
 
-.edu-list .item:hover, .bar:hover, .experience-card:hover{
+.edu-list .item:hover, .bar:hover, .experience-card:hover,.skills .skill:hover{
     transform: scale(1.03);
 }
 
@@ -809,7 +786,7 @@ header.sticky .nav-bar{
   
   .portfolio .portfolio-wrap .portfolio-info p {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
+    font-size: 20px;
     text-transform: uppercase;
     padding: 0;
     margin: 0;
@@ -845,6 +822,10 @@ header.sticky .nav-bar{
     opacity: 1;
   }
   
+  .portbor{
+    border: 4px var(--second-color) solid;
+    border-radius: 10px;
+    }
   /*--------------------------------------------------------------
   # Portfolio Details
   --------------------------------------------------------------*/
@@ -1318,10 +1299,7 @@ footer a{
         text-align: initial;
     }
     .home-container .home-img img {
-        transform: translate(80px, -300px);
-        position: absolute;
-        width: 100px;
-        height: 100px;
+        display: none;
     }
     .contact .container .content {
         flex-direction: column;
@@ -1386,3 +1364,24 @@ footer a{
     font-size: larger;
     color: white;
   }
+
+  ol, ul {
+  padding-left: 0rem !important;
+}
+
+.h4, h4 {
+    font-size: unset !important;
+}
+
+.btnfolio {
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--second-color);
+    color: white;
+}
+.btnfolio:hover {
+   background-color: var(--third-color);
+   transform: scale(110%);
+   transition-duration: 0.5s;
+}
