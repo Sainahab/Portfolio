@@ -220,6 +220,7 @@ header.sticky .nav-bar{
     margin-right: auto;
     padding: 4rem 2rem;
     flex-direction: column;
+    height: 100vh;
 }
 
 .home .home-container{
@@ -304,16 +305,19 @@ header.sticky .nav-bar{
 
 
 .home-container .home-img img{
-    width: 380px;
-    height: 430px;
-    transform: translate(0, 0);
+    position: absolute;
+    width: 70vh;
+    top: -22rem;
+    left: -25rem;
+    bottom: 0;
+    right: 0;
 }
 
 .home .scroll-down{
     color: var(--first-color);
     font-size: var(--normal-font-size);
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 10em;
 }
 
 .home .scroll-down i{
@@ -1116,24 +1120,18 @@ footer a{
 }
 
 .media-icons a:hover:nth-child(1){
-    color: blue;
-}
-.media-icons a:hover:nth-child(2){
-    color: palevioletred;
-}
-.media-icons a:hover:nth-child(3){
     color: rgb(101, 146, 228);
 }
-.media-icons a:hover:nth-child(4){
+.media-icons a:hover:nth-child(2){
     color: rgb(21, 21, 227);
 }
-.media-icons a:hover:nth-child(5){
+.media-icons a:hover:nth-child(3){
     color: purple;
 }
-.media-icons a:hover:nth-child(6){
+.media-icons a:hover:nth-child(4){
     color: yellow;
 }
-.media-icons a:hover:nth-child(7){
+.media-icons a:hover:nth-child(5){
     color: rgb(9, 177, 29);
 }
 
@@ -1243,7 +1241,10 @@ footer a{
     .home-container .info{
     margin-left: 0;
     }   
-
+    .home-container .info h3 {
+        font-size: 1rem;
+        width: 370;
+    }
    
     /*=======Home section=======*/
     h3 , h4 , .service-card{
@@ -1299,7 +1300,11 @@ footer a{
         text-align: initial;
     }
     .home-container .home-img img {
-        display: none;
+        position: absolute;
+        opacity: 0.3;
+        z-index: -999;
+        clip:rect(0px,516px,600px,0px);
+
     }
     .contact .container .content {
         flex-direction: column;
