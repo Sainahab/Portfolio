@@ -307,7 +307,7 @@ header.sticky .nav-bar{
 .home-container .home-img img{
     position: absolute;
     width: 70vh;
-    top: -22rem;
+    top: -20rem;
     left: -25rem;
     bottom: 0;
     right: 0;
@@ -1143,6 +1143,11 @@ footer a{
 }
 
 /*=======Media query max-width 1070px=======*/
+@media screen and (max-width: 1600px){
+ /*=======Header navigation menu=======*/
+ .home-container .home-img img{
+    top: -15rem;
+}
 @media screen and (max-width: 1070px){
  /*=======Header navigation menu=======*/
  .navigation{
