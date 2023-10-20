@@ -173,6 +173,7 @@ header.sticky{
     margin-right: auto;
     padding: 0 20px;
     transition: .6s ease;
+    overflow: hidden;
 }
 
 header.sticky .nav-bar{
