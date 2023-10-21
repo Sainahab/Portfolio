@@ -15,18 +15,18 @@ $errorMessage = 'There was an error while submitting your message. Please try ag
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
-    //Server settings
-    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'dvlprojectqq@gmail.com';                 // SMTP username
-    $mail->Password = 'nqoatskeswasdaxf';                           // SMTP password
-    $mail->SMTPSecure = 'ssl';                           // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 465;                                    // TCP port to connect to
+            $mail->Host = gethostname();  // Specify main and backup SMTP servers
+            $mail->SMTPAuth = true;                               // Enable SMTP authentication
+            $mail->Username = 'dev@sainahab.us';                 // SMTP username
+            $mail->Password = 'Saintahab123@';                           // SMTP password
+            $mail->SMTPSecure = 'ssl';                           // Enable TLS encryption, `ssl` also accepted
+            $mail->Port = 465;      
+            
+
 
     //Recipients
-    $mail->setFrom('dvlprojectqq@gmail.com', 'Portfolio Contact Form');
+    $mail->setFrom('dev@sainahab.us', 'Portfolio Contact Form');
     //$mail->setFrom('Donot-reply@signworks.ma', 'Website Contact Form');
     $mail->addAddress('ahabriyassine@gmail.com');     // Add a recipient
 
