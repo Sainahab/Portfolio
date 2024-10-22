@@ -309,7 +309,7 @@ header.sticky .nav-bar{
     position: absolute;
     width: 70vh;
     top: -20rem;
-    left: -25rem;
+    left: -35rem;
     bottom: 0;
     right: 0;
 }
@@ -1148,7 +1148,6 @@ footer a{
  /*=======Header navigation menu=======*/
  .home-container .home-img img{
     top: -15rem;
- }
 }
 @media screen and (max-width: 1070px){
  /*=======Header navigation menu=======*/
@@ -1309,6 +1308,7 @@ footer a{
     .home-container .home-img img {
         position: absolute;
         opacity: 0.3;
+        left: -25rem;
         z-index: -999;
         clip:rect(0px,516px,600px,0px);
 
@@ -1385,12 +1385,12 @@ footer a{
     font-size: unset !important;
 }
 
-.btnfolio {
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 10px;
-    background: var(--second-color);
-    color: white;
+.portfolio-links a button{
+    font-size: 15px !important;
+    padding: 10px !important;
+    border-radius: 10px !important;
+    background: var(--second-color) !important;
+    color: white !important;
 }
 .btnfolio:hover {
    background-color: var(--third-color);
