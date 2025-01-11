@@ -791,7 +791,7 @@ header.sticky .nav-bar{
   
   .portfolio .portfolio-wrap .portfolio-info p {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 20px;
+    font-size: 12px;
     text-transform: uppercase;
     padding: 0;
     margin: 0;
@@ -1387,7 +1387,7 @@ footer a{
 
 .portfolio-links a button{
     font-size: 15px !important;
-    padding: 10px !important;
+    padding: 5px 12px !important;
     border-radius: 10px !important;
     background: var(--second-color) !important;
     color: white !important;
