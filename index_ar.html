@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Yassine Ahab</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRFQJN4SK4"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'G-NRFQJN4SK4');
+    </script>
+    
+</head>
+<body>
+
+  <!--========Scroll To Top Button=========-->
+
+  <div class="scrollToTop-btn flex-center">
+      <i class="fas fa-arrow-up"></i>
+  </div>
+  
+  <!--========Light/Dark Theme Button=============-->
+
+  <div class="theme-btn flex-center">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+  </div>
+    
+  <!-- Language Selection Modal -->
+  <div class="modal fade" id="languageModal" tabindex="-1" aria-labelledby="languageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <p>اختر لغتك المفضلة:</p>
+                <div class="d-flex justify-content-around">
+                  <a class="flagg" onclick="redirectToPage('en')"><img src="assets/img/en.webp" alt="English language"></a>
+                  <a class="flagg" onclick="redirectToPage('fr')"><img src="assets/img/fr.webp" alt="French Language"></a>
+                  <a class="flagg" onclick="redirectToPage('ar')"><img src="assets/img/ar.webp" alt="Arabic Language"></a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!------Header------>
+ <header>
+     <div class="nav-bar">
+         <a href="#" class="logo">Yassine Ahab</a>
+         <div class="navigation">
+             <div class="nav-items">
+                 <div class="nav-close-btn"><i class="fas fa-times portfolio-close-btn"></i></div>
+                 <a class="active" href="#home">الرئيسية</a>
+                 <a href="#about">نبذة عني</a>
+                 <a href="#skills">المهارات</a>
+                 <a href="#services">الخدمات</a>
+                 <a href="#portfolio">أعمالي</a>
+                 <a href="#contact">اتصل بي</a>
+             </div>
+         </div>
+         <div class="nav-menu-btn"></div>
+         
+     </div>
+ </header>
+
+ <!------Home Section------->
+
+ <section class="home flex-center" id="home" style=" overflow: hidden;">
+     <div class="home-container">
+         <div class="media-icons" style="z-index: 1;" data-aos="flip-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true" >
+             <a href="https://twitter.com/dvlproject" target="_blank"><i class="fab fa-twitter"></i></a>
+             <a href="https://www.linkedin.com/in/yassine-ahabri/" target="_blank"><i class="fab fa-linkedin"></i></a>
+             <a href="https://github.com/sainahab" target="_blank"><i class="fab fa-github"></i></a>
+             <a href="https://www.snapchat.com/add/sain_ahab" target="_blank"><i class="fab fa-snapchat"></i></a>
+             <a href="https://api.whatsapp.com/send?phone=19713267533" target="_blank"><i class="fab fa-whatsapp"></i></a>
+         </div>
+         <div class="info" style="z-index: 1;" data-aos="fade-down" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+             <h2>مرحباً، أنا ياسين</h2>
+             <h3>أنا <span id="pros"></span> </h3>
+             <p>أنا أنشئ تطبيقات الويب والبرمجيات ذات التصميم الجميل، مع كتابة نظيفة وقابلة للاستجابة بشكل عالي</p>
+             <a href="#contact" class="btn">اطلب خدماتي <i class="fas fa-arrow-circle-right"></i></a>
+         </div>
+         <div class="home-img" data-aos="fade-down" data-aos-offset="200" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+             <img src="assets/img/selfie.webp" alt="profile picture">
+         </div>
+     </div>
+     <a href="#about" class="scroll-down" style="z-index: 1;">مرر لأسفل<i class="fas fa-arrow-circle-down"></i></a>
+ </section>
+
+ <!---======About Section=======--->
+
+ <section class="about section" id="about">
+     <div class="container flex-center">
+         <h1 class="section-title-01" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">نبذة عني</h1>
+         <h2 class="section-title-02">نبذة عني</h2>
+         <div class="content flex-center">
+             <div class="about-img" data-aos="fade-right" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+                 <img src="assets/img/profilepicture3.webp" alt="trophy picture" width="" height="">
+             </div>
+             <div class="about-info" data-aos="fade-down" data-aos-offset="200" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+                 <div class="description">
+                     <h3> أنا ياسين</h3>
+                     <h4>مطور <span> برامج كبير من ذوي الخبرة<br></span> مقيم في <span>طنجة، المغرب</span></h4>
+                     <p>خريج CS50 من جامعة هارفارد، أصمم وأبرمج أشياء بسيطة وجميلة، وأحب ما أفعله. عملت عن بُعد مع وكالات، وقدمت استشارات لبدء الشركات، وتعاونت مع أشخاص موهوبين لإنشاء منتجات رقمية للاستخدام التجاري والاستهلاكي. أنا واثق و هادئ، فضولي، وأعمل بشكل دائم على تحسين مهاراتي، مشكلة تصميم واحدة في كل مرة.</p>
+                        <br>
+                     <p> هذا الموقع هو في الأساس أحد الأمثلة في تطوير الويب، والذي تم بناؤه باستخدام HTML5 و CSS3/SASS و JavaScript. هنا، يمكن أيضًا العثور على أفكار لمشاريع بلغات مختلفة. شكرًا مرة أخرى لقراءتك هذا، بفضل أشخاص مثلك، فهو موجود وينمو! </p>
+                        <br> 
+                     <p> اطلع على مشاريعي</p>
+                 </div>
+                 <ul class="professional-list">
+                     <li class="list-item">
+                         <h3>7+</h3>
+                         <span>سنوات من<br>الخبرة</span>
+                     </li>
+                     <ul class="professional-list">
+                     <li class="list-item">
+                         <h3>25+</h3>
+                         <span>عملاء<br>راضين</span>
+                     </li>
+                     <ul class="professional-list">
+                        <li class="list-item">
+                            <h3>30+</h3>
+                            <span>مشاريع<br>ناجحة</span>
+                        </li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+ </section>
+
+ <!--========Skills Section===========-->
+
+ <section class="skills section" id="skills">
+     <div class="container flex-center">
+         <h1 class="section-title-01" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">المهارات</h1>
+         <h2 class="section-title-02">المهارات</h2>
+         <div class="content">
+             <div class="skills-description" data-aos="flip-right" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+                 <h3>التعليم والمهارات</h3>
+             </div>
+             <div class="skills-info education-all">
+                 <div class="education" data-aos="fade-right" data-aos-offset="200" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+                     <h4><label>التعليم</label></h4>
+                     <ul class="edu-list">
+                         <li class="item">
+                             <span class="year">نوف 2020 - يون 2021</span>
+                             <p><span>دورات اللغة الإنجليزية كلغة ثانية C2</span></p>
+                             <p><span>أكاديمية كامبريدج شفشاون</span>, MA</p>
+                         </li>
+                         <li class="item">
+                            <span class="year">سبت 2020 - نوف 2020</span>
+                             <p><span>دورات المتقدمة في تطوير الويب</span></p>
+                             <p><span>برنامج هارفارد CS50 التعليمي</span>, US</p>
+                        </li>
+                        <li class="item">
+                            <span class="year">سبت 2010- يول 2011</span>
+                            <p><span>درجة البكالوريوس</span></p>
+                            <p><span>EMHTP</span>, MA</p>
+                        </li>
+                     </ul>
+                 </div>
+                 <div class="education" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+                    <h4><label>الشهادات</label></h4>
+                    <ul class="edu-list">
+                        <li class="item">
+                            <span class="year">مارس 2022</span>
+                            <p><span>شهادة مطور تصميم الويب من Codecademy</span></p>
+                        </li>
+                        <li class="item">
+                           <span class="year">أغسطس 2017</span>
+                           <p><span> HACCP LVL 1 TO LVL 3</span></p>
+                           <p><span> تميمي جلوبال تافجا</span>, السعودية</p>
+                       </li>
+                    </ul>
+                </div>
+                <div class="education" data-aos="fade-down" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+                    <h4><label>Skills</label></h4>
+                    <ul class="skills-list">
+                        <li class="skill">
+                            <span>FrontEnd تطوير</span>
+                            <span>HTML-CSS-JS-React-VueJS-Wordpress-Bootstrap</span>
+                        </li>
+                        <li class="skill">
+                            <span>BackEnd تطوير</span>
+                            <span>PHP-Laravel-NodeJS</span>
+                        </li>
+                        <li class="skill">
+                            <span>اختبار الأجهزة/البرمجيات</span>
+                            <span>تخطيط - تصميم - تنفيذ - تقرير - إغلاق</span>
+                        </li>
+                        <li class="skill">
+                            <span>تخصص في تكنولوجيا المعلومات</span>
+                            <span> حل المشكلات-قابل للتكيف-دقيق-قادر على التواصل</span>
+                        </li>
+                    </ul>
+                </div>
+                
+             </div>
+             <div class="skills-description" data-aos="fade-top" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+                <h3>العمل والخبرة</h3>
+            </div>
+            <div class="skills-info" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+                <div class="experience-card">
+                    <div class="upper">
+                        <h3>مطور برامج / قائد الفريق</h3>
+                        <h5>دوام كامل | وكالة</h5>
+                        <span>أغسطس 2022 - حتى الآن</span>
+                    </div>
+                    <div class="hr"></div>
+                    <h4><label>SingWorks S.A.R.L</label></h4>
+                    <p> إنشاء مشاريع ويب معقدة · إدارة فريق تطوير البرمجيات · كتابة أكواد المواقع · تصحيح الأخطاء وإصلاحها · صيانة وتحديث المواقع</p>
+                </div>
+                <div class="experience-card">
+                    <div class="upper">
+                        <h3>مطور ويب أول وأخصائي تكنولوجيا المعلومات</h3>
+                        <h5>مستقل | عن بعد</h5>
+                        <span>سبتمبر 2020 - أغسطس 2022</span>
+                    </div>
+                    <div class="hr"></div>
+                    <h4><label>Upwork/Konra</label></h4>
+                    <p>أصمم وأبرمج تطبيقات الويب والبرمجيات بطريقة حديثة، مناسبة لجميع الأحجام وقابلة للاستجابة مع كل شيء.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="upper">
+                        <h3>مطور Front-end</h3>
+                        <h5>دوام كامل | وكالة</h5>
+                        <span>July 2019 - Sept 2020</span>
+                    </div>
+                    <div class="hr"></div>
+                    <h4><label>التميمي للخدمات الصناعية,السعودية</label></h4>
+                    <p>صيانة/تحديث وتحسين موقع الشركة الإلكتروني وإدارة حسابات وسائل التواصل الاجتماعي!</p>
+                </div>
+                <div class="experience-card">
+                    <div class="upper">
+                        <h3>مطور</h3>
+                        <h5> دوام كامل | تدريب</h5>
+                        <span>يوليو 2019 - سبتمبر 2020</span>
+                    </div>
+                    <div class="hr"></div>
+                    <h4><label>TECH House</label></h4>
+                    <p>متدرب يساعد في إنشاء مواقع الويب باستخدام HTML و CSS، بالإضافة إلى مواقع WordPress ومتاجر Shopify.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="upper">
+                        <h3>مطور و أخصائي دعم تكنولوجيا المعلومات</h3>
+                        <h5>دوام كامل | وكالة</h5>
+                        <span>أغسطس 2012 - سبتمبر 2018</span>
+                    </div>
+                    <div class="hr"></div>
+                    <h4><label>التميمي للخدمات الصناعية,السعودية</label></h4>
+                    <p>حل المشكلات التقنية وإصلاح مشكلات الكمبيوتر و عبر الهاتف والدردشة الحية</p>
+                </div>
+                <div class="experience-card">
+                    <div class="upper">
+                        <h3>أخصائي تكنولوجيا المعلومات</h3>
+                        <h5>دوام كامل | وكالة</h5>
+                        <span>  يونيو 2011 - أغسطس 2012</span>
+                    </div>
+                    <div class="hr"></div>
+                    <h4><label>IT CLUB</label></h4>
+                    <p>حل المشكلات التقنية وإصلاح مشكلات الكمبيوتر</p>
+                </div>
+            </div>
+         </div>
+     </div>
+ </section>
+
+ <!--=============Services Section====================-->
+
+ <section class="services section" id="services">
+     <div class="container flex-center">
+         <h1 class="section-title-01" data-aos="fade-top" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">Services</h1>
+         <h2 class="section-title-02">Services</h2>
+         <div class="content" >
+             <div class="services-description" data-aos="fade-top" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+                 <h3>ما أقدمه</h3>
+             </div>
+             <ul class="service-list">
+                <li class="service-container">
+                    <div class="service-card">
+                        <i class="fas fa-file-code"></i>
+                        <h3>تطوير البرمجيات</h3>
+                        <div class="learn-more-btn">تعرف على المزيد <i class="fas fa-long-arrow-alt-right"></i></div>
+                    </div>
+                    <div class="service-modal flex-center">
+                        <div class="service-modal-body">
+                            <i class="fas fa-times modal-close-btn"></i>
+                            <h3>تطوير البرمجيات</h3>
+                            <h4>ما هو تطوير البرمجيات؟</h4>
+                            <p>تطوير البرمجيات هو عملية بناء وصيانة مواقع الويب، وتطبيقات الويب، والتطبيقات المحمولة. إنه العمل الذي يتم خلف الكواليس لجعلها تبدو رائعة، تعمل بسرعة، وتوفر تجربة مستخدم سلسة.
+                              يقوم مطورو البرمجيات بذلك باستخدام مجموعة متنوعة من لغات البرمجة. تعتمد اللغات التي يستخدمونها على نوع المهام التي يؤدونها والمنصات التي يعملون عليها.</p>
+                            <h4>ما أقدمه</h4>
+                            <ul>
+                                <li><i class="fas fa fa-check-circle"></i> تطوير مواقع الويب</li>
+                                <li><i class="fas fa fa-check-circle"></i> تطوير لتطبيقات</li>
+                                <li><i class="fas fa fa-check-circle"></i> صيانة</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                 <li class="service-container">
+                     <div class="service-card">
+                         <i class="fas fa-hard-drive"></i>
+                         <h3>اختبار البرمجيات والأجهزة</h3>
+                         <div class="learn-more-btn">تعرف على المزيد <i class="fas fa-long-arrow-alt-right"></i></div>
+                     </div>
+                     <div class="service-modal flex-center">
+                         <div class="service-modal-body">
+                             <i class="fas fa-times modal-close-btn"></i>
+                             <h3>اختبار البرمجيات والأجهزة</h3>
+                             <h4>ما هو اختبار البرمجيات والأجهزة؟</h4>
+                             <p>مختبر البرمجيات والأجهزة هو في الأساس مختبر يقوم بشكل أساسي باختبار الجودة على برمجيات وأجهزة العملاء. عادةً ما يكون لديه فهم قوي لأدوات وتقنيات الاختبار، إلى جانب مستوى عالٍ من المعرفة/الخبرة في تطوير البرمجيات.
+                              يضمن المختبر أن تعمل البرمجيات والأجهزة كما هو متوقع من الناحية الوظيفية وغير الوظيفية.</p>
+                             <h4>ما أقدمه</h4>
+                             <ul>
+                              <li><i class="fas fa fa-check-circle"></i> اختبار الوحدة</li>
+                              <li><i class="fas fa fa-check-circle"></i> اختبار النظام</li>
+                              <li><i class="fas fa fa-check-circle"></i> اختبار التكامل</li>
+                              <li><i class="fas fa fa-check-circle"></i> اختبار الأداء</li>                              
+                             </ul>
+                         </div>
+                     </div>
+                 </li>
+                 <li class="service-container">
+                    <div class="service-card">
+                        <i class="fas fa-computer-mouse"></i>
+                        <h3>أخصائي تكنولوجيا المعلومات</h3>
+                        <div class="learn-more-btn">تعرف على المزيد <i class="fas fa-long-arrow-alt-right"></i></div>
+                    </div>
+                    <div class="service-modal flex-center">
+                        <div class="service-modal-body">
+                            <i class="fas fa-times modal-close-btn"></i>
+                            <h3>أخصائي تكنولوجيا المعلومات</h3>
+                            <h4>ما هو أخصائي تكنولوجيا المعلومات؟</h4>
+                            <p>تعريف أخصائي تكنولوجيا المعلومات هو محترف تقني مسؤول عن تنفيذ ومراقبة وصيانة أنظمة تكنولوجيا المعلومات.</p>
+                            <h4>ما أقدمه</h4>
+                            <ul>
+                              <li><i class="fas fa fa-check-circle"></i> تحليل الشبكات، التدقيقات التقنية</li>
+                              <li><i class="fas fa fa-check-circle"></i> إدارة الأنظمة/الويب/قواعد البيانات</li>
+                              <li><i class="fas fa fa-check-circle"></i> الأمن وضمان المعلومات</li>
+                              <li><i class="fas fa fa-check-circle"></i> إصلاح وصيانة وترقية أنظمة تكنولوجيا المعلومات (RMU)</li>                              
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="service-container">
+                    <div class="service-card">
+                        <i class="fas fa-align-left"></i>
+                        <h3>كتابة المحتوى</h3>
+                        <div class="learn-more-btn">تعرف على المزيد <i class="fas fa-long-arrow-alt-right"></i></div>
+                    </div>
+                    <div class="service-modal flex-center">
+                        <div class="service-modal-body">
+                            <i class="fas fa-times modal-close-btn"></i>
+                            <h3>كتابة المحتوى</h3>
+                            <h4>ما هي كتابة المحتوى؟</h4>
+                            <p>كتابة المحتوى هي نوع من الكتابة المهنية الخاصة بالتسويق التي يتم إنشاؤها لجمهور عبر الإنترنت. يقوم المسوقون وأصحاب الأعمال بنشر المحتوى أو النصوص عبر الإنترنت لعدة أسباب. قد يسعون لزيادة حركة المرور إلى موقعهم الإلكتروني أو لإبلاغ عملائهم عن منتج أو خدمة جديدة. غالبًا ما يستعين المحترفون في الأعمال بكُتاب المحتوى لإنتاج رسائل عالية الجودة من أجل نصوص المبيعات، المدونات، المقالات، والمنشورات على وسائل التواصل الاجتماعي. يجب على الكاتب أن يفهم الجمهور لكتابة نصوص ناجحة تجذبهم.</p>
+                            <h4>ما أقدمه</h4>
+                            <ul>
+                              <li><i class="fas fa fa-check-circle"></i> كتابة محتوى الويب</li>
+                              <li><i class="fas fa fa-check-circle"></i> كتابة المدونات للموقع الإلكتروني</li>
+                              <li><i class="fas fa fa-check-circle"></i> محتوى لوسائل التواصل الاجتماعي</li>                              
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="service-container">
+                    <div class="service-card">
+                        <i class="fa-solid fa-brain"></i>
+                        <h3> تحليل البيانات</h3>
+                        <div class="learn-more-btn">تعرف على المزيد <i class="fas fa-long-arrow-alt-right"></i></div>
+                    </div>
+                    <div class="service-modal flex-center">
+                        <div class="service-modal-body">
+                            <i class="fas fa-times modal-close-btn"></i>
+                            <h3>تحليل البيانات</h3>
+                            <h4>ما هو تحليل البيانات؟</h4>
+                            <p>يجمع محللو البيانات البيانات ويفحصونها باستخدام أدوات متخصصة لإنشاء معلومات تساعد الآخرين في اتخاذ القرارات. سيجيبون على الأسئلة المتعلقة بالبيانات ويبحثون عن الاتجاهات والأنماط والشواذ داخلها.</p>
+                            <h4>ما أقدمه</h4>
+                            <ul>
+                              <li><i class="fas fa fa-check-circle"></i> استخدام أدوات متخصصة لاستخراج البيانات المطلوبة</li>
+                              <li><i class="fas fa fa-check-circle"></i> تحليل البيانات لتحديد الاتجاهات</li>
+                              <li><i class="fas fa fa-check-circle"></i> إنتاج تقارير ورسوم بيانية للتواصل مع غير المتخصصين حول الاتجاهات في البيانات</li>
+                              <li><i class="fas fa fa-check-circle"></i> تقديم المعلومات المولدة من البيانات للعملاء والمديرين.</li>                              
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="service-container">
+                    <div class="service-card">
+                        <i class="fa-solid fa-user-secret"></i>
+                        <h3>الأمن السيبراني</h3>
+                        <div class="learn-more-btn">تعرف على المزيد <i class="fas fa-long-arrow-alt-right"></i></div>
+                    </div>
+                    <div class="service-modal flex-center">
+                        <div class="service-modal-body">
+                            <i class="fas fa-times modal-close-btn"></i>
+                            <h3>الأمن السيبراني</h3>
+                            <h4>ما هو الأمن السيبراني؟</h4>
+                            <p>لأمن السيبراني أو القرصنة الأخلاقية تتضمن محاولة مصرح بها للحصول على وصول غير مصرح به إلى نظام كمبيوتر أو تطبيق أو بيانات. تنفيذ قرصنة أخلاقية ينطوي على تكرار استراتيجيات وأفعال المهاجمين الخبيثين. تساعد هذه الممارسة في تحديد الثغرات الأمنية التي يمكن معالجتها قبل أن تتاح الفرصة للمهاجم الخبيث لاستغلالها واستخدام نفس الأساليب والأدوات التي يستخدمها القراصنة الخبيثين ولكن بإذن من الشخص المصرح له</p>
+                            <h4>ما أقدمه</h4>
+                            <ul>
+                              <li><i class="fas fa fa-check-circle"></i> اختراق الأنظمة أو الشبكات لاكتشاف التهديدات</li>
+                              <li><i class="fas fa fa-check-circle"></i> هجمات التصيد الإلكتروني</li>
+                              <li><i class="fas fa fa-check-circle"></i> هجمات الهندسة الاجتماعية</li>
+                              <li><i class="fas fa fa-check-circle"></i> هجمات الحقن ومصادقة مكسورة</li>                              
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="service-container">
+                    <div class="service-card">
+                        <i class="fas fa-cash-register"></i>
+                        <h3>حلول التجارة الإلكترونية</h3>
+                        <div class="learn-more-btn">تعرف على المزيد <i class="fas fa-long-arrow-alt-right"></i></div>
+                    </div>
+                    <div class="service-modal flex-center">
+                        <div class="service-modal-body">
+                            <i class="fas fa-times modal-close-btn"></i>
+                            <h3>حلول التجارة الإلكترونية</h3>
+                            <h4>ما هي حلول التجارة الإلكترونية؟</h4>
+                            <p>حلول التجارة الإلكترونية هي خدمة لإنشاء تجارب تسوق عبر الإنترنت يتوقعها المستهلكون. تتضمن إنشاء مواقع وتطبيقات التجارة الإلكترونية من البداية والعمل مع مجموعة متنوعة من التقنيات والمنصات لتوصيل منتجاتك إلى العملاء.</p>
+
+                            <ul>
+                              <li><i class="fas fa fa-check-circle"></i> تطوير مواقع وتطبيقات التجارة الإلكترونية</li>
+                              <li><i class="fas fa fa-check-circle"></i> إدارة كاملة للمنتجات والفئات</li>
+                              <li><i class="fas fa fa-check-circle"></i> مجموعة كاملة من أدوات التسويق وتحسين محركات البحث (SEO)</li>                              
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="service-container">
+                    <div class="service-card">
+                        <i class="fas fa-thumbs-up"></i>
+                        <h3>التسويق الرقمي</h3>
+                        <div class="learn-more-btn">تعرف على المزيد <i class="fas fa-long-arrow-alt-right"></i></div>
+                    </div>
+                    <div class="service-modal flex-center">
+                        <div class="service-modal-body">
+                            <i class="fas fa-times modal-close-btn"></i>
+                            <h3>التسويق الرقمي</h3>
+                            <h4>Qu'est-ce que le marketing des réseaux sociaux ?</h4>
+                            <p>Le marketing des réseaux sociaux est une méthode de marketing en ligne qui utilise différentes plateformes de réseaux sociaux, telles que Facebook, Twitter, LinkedIn et Pinterest, pour établir la reconnaissance de la marque, attirer l'attention des clients et connecter les marques à un public plus large et plus diversifié.</p>
+
+                            <h4>ما أقدمه</h4>
+                            <ul>
+                              <li><i class="fas fa fa-check-circle"></i> تطوير الوعي بالعلامة التجارية (المتابعين)</li>
+                              <li><i class="fas fa fa-check-circle"></i> بناء العلاقات (التفاعل)</li>
+                              <li><i class="fas fa fa-check-circle"></i> زيادة ظهور الموقع الإلكتروني (الزيارات والتحويلات)</li>                              
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+             </ul>
+         </div>
+     </div>
+ </section>
+
+
+
+ <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio" style="overflow: hidden;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>أعمالي</h2>
+          <p>تفقد أعمالي</p>
+
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="portfolio-flters">
+                  <li data-filter="*" class="filter-active">الكل</li>
+                  <li data-filter=".filter-web">مواقع الويب</li>
+                  <li data-filter=".filter-app">التطبيقات</li>
+                  <li data-filter=".filter-card">اختبار البرمجيات</li>                  
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+             <div class="portfolio-wrap portbor">
+               <img src="assets/img/portfolio/school.webp" class="img-fluid" alt="school software testing">
+               <div class="portfolio-info">
+                 <h4>اختبار برمجيات المدرسية</h4>
+                 <div class="portfolio-links">
+                   <a href="assets/img/portfolio/school.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/website1b.webp" class="img-fluid" alt="Tamimi & CO website picture">
+              <div class="portfolio-info">
+                <h4>Tamimi & CO</h4>
+                <p>موقع ويب لشركة قانونية</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/tamimi2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://www.tamimi.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/taragalte.webp" class="img-fluid" alt="livraini website picture">
+              <div class="portfolio-info">
+                <h4>Taragalte</h4>
+                <p>Taragalte Music Festival website</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/taragalte2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://www.taragalte.org/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/livraini main.webp" class="img-fluid" alt="livraini website picture">
+              <div class="portfolio-info">
+                <h4>Livarini</h4>
+                <p>موقع ويب لشركة إدارة الوجبات الخفيفة</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/livraini.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://livraini.ma" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/irongirlsmain.webp" class="img-fluid" alt="iron ring girls website picture" width="460px">
+              <div class="portfolio-info">
+                <h4>Iron Ring Girls</h4>
+                <p>موقع ويب لمجتمع النساء في الهندسة</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/irongirls.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://www.ironringgirls.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="portfolio-details.html" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/new.webp" class="img-fluid" alt="soulsborn website picture">
+              <div class="portfolio-info">
+                <h4>soulsborn Marketplace</h4>
+                <p>متجر رونات إلدن رينغ</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/long.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://soulsborn.com" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/signworks.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
+              <div class="portfolio-info">
+                <h4>Signworks LLC</h4>
+                <p>صفحة وكالة رقمية مقرها في طنجة</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/signworks s1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://signworks.ma" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/ii1.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
+              <div class="portfolio-info">
+                <h4>Issa Imobilier</h4>
+                <p>العقارات مقرها في طنجة</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/ii.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://www.issaimmobilier.ma/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/pc.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
+              <div class="portfolio-info">
+                <h4>PC Shop</h4>
+                <p>متجر لابتوبات واكسسوارات مقرها في طنجة</p>
+                <div class="portfolio-links">
+                  <a href="https://pc-shop.ma/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/miltos s.webp" class="img-fluid" alt="Luxury Home Rental">
+              <div class="portfolio-info">
+                <h4>Miltos Sivota Luxury Home</h4>
+                <p>إيجار منزل فاخر في اليونان</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/miltos.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://miltos-sivotaluxuryhome.com/" target="_blank" title="Luxury Home Rental"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/nifty.webp" class="img-fluid" alt="nifty website picture">
+              <div class="portfolio-info">
+                <h4>nifty Marketplace</h4>
+                <p>سوق العملات المشفرة وNFT</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/nifty.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://www.niftysouq.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/nia.webp" class="img-fluid" alt="nifty website picture">
+              <div class="portfolio-info">
+                <h4>Wedding Website</h4>
+                <p>نظام حجز زواج ومعلومات المكان</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/nia2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://theniageowedding.com/de/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/b.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
+              <div class="portfolio-info">
+                <h4>Basique Conseil</h4>
+                <p>صفحة وكالة مقرها في الدار البيضاء</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/bc2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://basiqueconseil.ma/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/me.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
+              <div class="portfolio-info">
+                <h4>marocaines eternelles</h4>
+                <p>مدونة للنساء المغربيات</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/me2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://marocaineseternelles.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/aa1.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
+              <div class="portfolio-info">
+                <h4>Aafer Imobilier</h4>
+                <p>العقارات مقرها في طنجة</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/aa.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://aaferimmobilier.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/id.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
+              <div class="portfolio-info">
+                <h4>Idvalue</h4>
+                <p>صفحة وكالة الشركات</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/id2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="http://idvalue.ma/home/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/old.webp" class="img-fluid" alt="soulsborn website picture">
+              <div class="portfolio-info">
+                <h4>Elden Marketplace</h4>
+                <p>متجر الرونات</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/soulsborn.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://old.soulsborn.com" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/website6.webp" class="img-fluid" alt="tamimi group website picture" width="460px">
+              <div class="portfolio-info">
+                <h4>Tamimi Global</h4>
+                <p>صفحة وكالة الشركات</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/tamimiglobal.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://tamimigroup.com.sa/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/dc.webp" class="img-fluid" alt="tamimi group website picture" width="460px">
+              <div class="portfolio-info">
+                <h4>digicaisse</h4>
+                <p>Digital POS SAAS websites</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/dc1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://digicaisse.pro/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/engines.webp" class="img-fluid" alt="engines software testing">
+              <div class="portfolio-info">
+                <h4>اختبار البرمجيات</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/engines.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/website4.webp" class="img-fluid" alt="ecater website picture" width="460px">
+              <div class="portfolio-info">
+                <h4>Ecater</h4>
+                <p>موقع ويب لمزود خدمة التموين</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/website4b.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://ecater.io/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/website3.webp" class="img-fluid" alt="allysbar website picture" width="460px">
+              <div class="portfolio-info">
+                <h4>Ally's Bar</h4>
+                <p>موقع ويب للحانة ومتجر المشروبات</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/website3b.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://www.allysbar.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/medic.webp" class="img-fluid" alt="Medics website picture" width="460px">
+              <div class="portfolio-info">
+                <h4>Blue Wren Acupuncture</h4>
+                <p>موقع العيادة الطبية</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/doc.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="https://bluewrenacupuncture.com.au" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+ 
+     <!--=======Get-in-Touch=======-->
+     <div class="get-in-touch ok" >
+         <div class="container" >
+             <div class="content flex-center">
+                 <div class="contact-card flex-center">
+                    <div class="title">
+                      <h4>لنناقش</h4>
+                      <h3>عن مشروعك</h3>
+                      <h2>التالي</h2>
+                      
+                    </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+    </section>
+ <!--=======Our Clients=======-->
+
+
+ <!----=======Contact Section======---->
+
+ <section class="contact section" id="contact">
+     <div class="container flex-center">
+      <h1 class="section-title-01">اتصل بي</h1>
+      <h2 class="section-title-02">اتصل بي</h2>     
+
+         <div class="content">
+             <div class="contact-left">
+                 <h2>لنناقش مشروعك</h2>
+                 <ul class="contact-list">
+                     <li>
+                         <h3 class="item-title"><i class="fa-brands fa-whatsapp"></i> Whatsapp</h3>
+                         <span><a href="https://api.whatsapp.com/send?phone=19713267533">+1(971)-3267533</a></span>
+                     </li>
+                     <li>
+                         <h3 class="item-title"><i class="fas fa-phone" style="font-size: 1.6em;"></i> Phone</h3>
+                         <span><a href="tel:+212660043369">+(212)-660043369</a></span>
+                     </li> 
+                     <li>
+                        <h3 class="item-title"><i class="fas fa-envelope"></i> بريد الإلكتروني</h3>
+                        <span><a href="mailto:dev@sainahab.us">dev@sainahab.us</a></span>
+                    </li>
+                 </ul>
+             </div>
+             <div class="contact-right">
+              <p>أنا دائمًا مفتوح لمناقشة المنتجات<br><span>أعمال التصميم، التعاون أو الشراكات.</span></p>
+            
+                <form id="contact-form" method="post" action="contact.php" role="form" class="contact-form">
+
+                        <div class="first-row">
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder="من فضلك أدخل اسمك *" required="required" data-error="Firstname is required.">
+                                    <div class="help-block with-errors"></div>
+                        </div>
+                    <div class="second-row">
+                        <input id="form_email" type="email" name="email" class="form-control" placeholder="من فضلك أدخل بريدك الإلكتروني *" required="required" data-error="Valid email is required.">
+                        <div class="help-block with-errors"></div>
+                        <input id="form_subject" type="text" name="subjecto" class="form-control" placeholder="من فضلك أدخل الموضوع*" required="required" data-error="Valid subject is required.">
+                                    <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="third-row">
+                        <textarea id="form_message" name="message" class="form-control" placeholder="رسالة لي *" rows="7" required="required" data-error="Please, leave us a message."></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <button class="btn disabled" type="submit" name="submit">إرسال الرسالة <i class="fas fa-paper-plane"></i></button>
+                    <div class="messages"></div>
+                 </form>
+             </div>
+         </div>
+     </div>
+ </section>
+
+ <!--===========Footer============-->
+
+ <footer>
+     <div class="footer-container">
+         <div class="about group">
+             <h2>Yassine</h2>
+             <p>Senior Web Developer</p>
+         </div>
+         <div class="hr"></div>
+         <div class="footer-copyright group">
+            <p>©2025 By Yassine Ahab. All Rights Reserved.</p>
+        </div>
+         <div class="hr"></div>
+         <div class="follow group">
+             <h3>Follow</h3>
+             <div class="media-icons">
+                <a href="https://twitter.com/dvlproject" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/yassine-ahabri/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/sainahab" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.snapchat.com/add/sain_ahab" target="_blank"><i class="fab fa-snapchat"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=19713267533" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+         </div>
+     </div>
+ </footer>
+
+    <!---======External Script=======--->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/validator.min.js"></script>
+    <script src="assets/js/contact.js"></script> 
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/bk.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed('#pros', {
+        strings: ['من كبار مطوري البرمجيات','مختبر برمجيات','أخصائي تكنولوجيا المعلومات'],
+        typeSpeed: 50,
+        loop: true,
+        loopCount: Infinity,
+      });
+
+      AOS.init({
+                // Global settings:
+                disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+                startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+                initClassName: 'aos-init', // class applied after initialization
+                animatedClassName: 'aos-animate', // class applied on animation
+                useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+                disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+                debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+                throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+                
+
+                // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+                offset: 120, // offset (in px) from the original trigger point
+                delay: 0, // values from 0 to 3000, with step 50ms
+                duration: 400, // values from 0 to 3000, with step 50ms
+                easing: 'ease', // default easing for AOS animations
+                once: false, // whether animation should happen only once - while scrolling down
+                mirror: true, // whether elements should animate out while scrolling past them
+                anchorPlacement: 'top-center', // defines which position of the element regarding to window should trigger the animation
+
+                });
+      // Show the modal when the page loads
+      document.addEventListener('DOMContentLoaded', () => {
+            const languageModal = new bootstrap.Modal(document.getElementById('languageModal'), {
+                backdrop: 'static',
+                keyboard: false
+            });
+            languageModal.show();
+        });
+
+        // Redirect to the selected language page
+        function redirectToPage(language) {
+            const languageModal = bootstrap.Modal.getInstance(document.getElementById('languageModal'));
+            if (language === 'ar') {
+                // Close the modal for English
+                languageModal.hide();
+            } else if (language === 'fr') {
+                // Redirect to the French page
+                window.location.href = 'index_fr.html';
+            } else if (language === 'en') {
+                // Redirect to the Arabic page
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html>
