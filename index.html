@@ -53,9 +53,9 @@
             <div class="modal-body text-center">
                 <p>Select your preferred language to continue:</p>
                 <div class="d-flex justify-content-around">
-                    <a class="flagg" onclick="redirectToPage('en')"><img src="assets/img/en.webp" alt="English language"></a>
-                    <a class="flagg" onclick="redirectToPage('fr')"><img src="assets/img/fr.webp" alt="French Language"></a>
-                    <a class="flagg" onclick="redirectToPage('ar')"><img src="assets/img/ar.webp" alt="Arabic Language"></a>
+                  <a class="flagg" onclick="redirectToPage('index.html')"><img src="assets/img/en.webp" alt="English language"></a>
+                  <a class="flagg" onclick="redirectToPage('index_fr.html')"><img src="assets/img/fr.webp" alt="French Language"></a>
+                  <a class="flagg" onclick="redirectToPage('index_ar.html')"><img src="assets/img/ar.webp" alt="Arabic Language"></a>
                 </div>
             </div>
         </div>
@@ -74,6 +74,7 @@
                  <a href="#services">Services</a>
                  <a href="#portfolio">My Work</a>
                  <a href="#contact">Contact</a>
+                 <a href="#" onclick="showLanguageChanger()"><img src="assets/img/globe.png" style="width: 30px;" >
              </div>
          </div>
          <div class="nav-menu-btn"></div>
@@ -979,29 +980,39 @@
                 anchorPlacement: 'top-center', // defines which position of the element regarding to window should trigger the animation
 
                 });
-      // Show the modal when the page loads
-      document.addEventListener('DOMContentLoaded', () => {
-            const languageModal = new bootstrap.Modal(document.getElementById('languageModal'), {
-                backdrop: 'static',
-                keyboard: false
-            });
-            languageModal.show();
-        });
+                // Show language modal when the button in the header is clicked
+function showLanguageChanger() {
+    const languageModal = new bootstrap.Modal(document.getElementById('languageModal'));
+    languageModal.show();
+}
 
-        // Redirect to the selected language page
-        function redirectToPage(language) {
-            const languageModal = bootstrap.Modal.getInstance(document.getElementById('languageModal'));
-            if (language === 'en') {
-                // Close the modal for English
-                languageModal.hide();
-            } else if (language === 'fr') {
-                // Redirect to the French page
-                window.location.href = 'index_fr.html';
-            } else if (language === 'ar') {
-                // Redirect to the Arabic page
-                window.location.href = 'index_ar.html';
-            }
-        }
+// Redirect to the selected language page
+function redirectToPage(language) {
+    localStorage.setItem('selectedLanguage', language); // Save language selection in localStorage
+    if (language === 'index.html' || language === 'index_fr.html' || language === 'index_ar.html') {
+        // Redirect to the appropriate page
+        window.location.href = language;
+    }
+}
+
+// Check if the modal should be shown on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const selectedLanguage = localStorage.getItem('selectedLanguage');
+    const currentPage = window.location.pathname.split('/').pop(); // Get the current file name
+
+    if (!selectedLanguage) {
+        // If no language is selected, show the modal
+        const languageModal = new bootstrap.Modal(document.getElementById('languageModal'), {
+            backdrop: 'static',
+            keyboard: false
+        });
+        languageModal.show();
+    } else if (selectedLanguage !== currentPage) {
+        // Redirect to the selected language page if it doesn't match the current page
+        window.location.href = selectedLanguage;
+    }
+});
+
     </script>
 </body>
 </html>

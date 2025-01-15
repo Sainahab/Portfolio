@@ -184,6 +184,7 @@ header.sticky .nav-bar{
     color: var(--first-color);
     font-size: 1.3em;
     font-weight: 600;
+    padding-top: 20px;
 }
 
 .nav-items a{
@@ -312,6 +313,15 @@ header.sticky .nav-bar{
     left: -35rem;
     bottom: 0;
     right: 0;
+}
+
+.home-container .ar-img img{
+    position: absolute;
+    width: 70vh;
+    top: -20rem;
+    right: -35rem;
+    bottom: 0;
+    left: 0;
 }
 
 .home .scroll-down{
@@ -1149,8 +1159,15 @@ footer a{
  .home-container .home-img img{
     top: -15rem;
 }
+.home-container .ar-img img{
+    top: -15rem;
+}
 @media screen and (max-width: 1070px){
  /*=======Header navigation menu=======*/
+ .nav-bar .logo{
+    padding-bottom: 30px;
+}
+ 
  .navigation{
     position: fixed;
     width: 100%;
@@ -1165,6 +1182,7 @@ footer a{
     opacity: 0;
     transition: .9s ease;
  }
+
 
  .navigation.active{
     visibility: visible;
@@ -1217,6 +1235,18 @@ footer a{
     cursor: pointer;
     display: block;
  }
+
+.botona img{
+    background: var(--second-color);
+    color: #fff;
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 25px;
+    padding: 20px 30px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
  /*=======Home section=======*/
   
  /*=======About section=======*/
@@ -1313,6 +1343,14 @@ footer a{
         clip:rect(0px,516px,600px,0px);
 
     }
+    .home-container .ar-img img {
+        position: absolute;
+        opacity: 0.3;
+        right: -20rem;
+        z-index: -999;
+        clip:rect(0px,516px,600px,0px);
+
+    }
     .contact .container .content {
         flex-direction: column;
     }
@@ -1359,7 +1397,7 @@ footer a{
     }
 }
 
-a.flagg:hover {
+.flagg img:hover {
     cursor: pointer;
     transform: scale(1.2);
     transition: 0.5s;
@@ -1385,6 +1423,7 @@ a.flagg:hover {
 
   ol, ul {
   padding-left: 0rem !important;
+  padding-right: 0rem !important;
 }
 
 .h4, h4 {

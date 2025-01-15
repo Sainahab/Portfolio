@@ -27,7 +27,16 @@
 
      gtag('config', 'G-NRFQJN4SK4');
     </script>
-    
+    <style>
+      @media screen and (max-width: 1070px){
+        .nav-bar {
+    position: relative;
+    height: calc(4rem + 1rem);
+    max-width: 1250px;
+    display: flex;
+    justify-content: flex-end;}
+      }
+    </style>
 </head>
 <body>
 
@@ -51,9 +60,9 @@
             <div class="modal-body text-center">
                 <p>اختر لغتك المفضلة:</p>
                 <div class="d-flex justify-content-around">
-                  <a class="flagg" onclick="redirectToPage('en')"><img src="assets/img/en.webp" alt="English language"></a>
-                  <a class="flagg" onclick="redirectToPage('fr')"><img src="assets/img/fr.webp" alt="French Language"></a>
-                  <a class="flagg" onclick="redirectToPage('ar')"><img src="assets/img/ar.webp" alt="Arabic Language"></a>
+                  <a class="flagg" onclick="redirectToPage('index.html')"><img src="assets/img/en.webp" alt="English language"></a>
+                  <a class="flagg" onclick="redirectToPage('index_fr.html')"><img src="assets/img/fr.webp" alt="French Language"></a>
+                  <a class="flagg" onclick="redirectToPage('index_ar.html')"><img src="assets/img/ar.webp" alt="Arabic Language"></a>
               </div>
             </div>
         </div>
@@ -61,23 +70,27 @@
 </div>
  <!------Header------>
  <header>
-     <div class="nav-bar">
-         <a href="#" class="logo">Yassine Ahab</a>
-         <div class="navigation">
-             <div class="nav-items">
-                 <div class="nav-close-btn"><i class="fas fa-times portfolio-close-btn"></i></div>
-                 <a class="active" href="#home">الرئيسية</a>
-                 <a href="#about">نبذة عني</a>
-                 <a href="#skills">المهارات</a>
-                 <a href="#services">الخدمات</a>
-                 <a href="#portfolio">أعمالي</a>
-                 <a href="#contact">اتصل بي</a>
-             </div>
-         </div>
-         <div class="nav-menu-btn"></div>
-         
-     </div>
- </header>
+  <div class="nav-bar">
+      <a href="#" class="logo">Yassine Ahab</a>
+      <div class="navigation">
+          <div class="nav-items">
+              <div class="nav-close-btn"><i class="fas fa-times portfolio-close-btn"></i></div>
+              <a class="active" href="#home">الرئيسية</a>
+              <a href="#about">نبذة عني</a>
+              <a href="#skills">المهارات</a>
+              <a href="#services">الخدمات</a>
+              <a href="#portfolio">أعمالي</a>
+              <a href="#contact">اتصل بي</a>
+              <a href="#" onclick="showLanguageChanger()"><img src="assets/img/globe.png" style="width: 30px;" >
+              <a href=""></a>
+            </a>
+          </div>
+      </div> 
+          <div class="nav-menu-btn"></div>
+      </div>
+  </div>
+</header>
+
 
  <!------Home Section------->
 
@@ -96,7 +109,7 @@
              <p>أنا أنشئ تطبيقات الويب والبرمجيات ذات التصميم الجميل، مع كتابة نظيفة وقابلة للاستجابة بشكل عالي</p>
              <a href="#contact" class="btn">اطلب خدماتي <i class="fas fa-arrow-circle-right"></i></a>
          </div>
-         <div class="home-img" data-aos="fade-down" data-aos-offset="200" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+         <div class="ar-img" data-aos="fade-down" data-aos-offset="200" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
              <img src="assets/img/selfie.webp" alt="profile picture">
          </div>
      </div>
@@ -110,7 +123,7 @@
          <h1 class="section-title-01" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">نبذة عني</h1>
          <h2 class="section-title-02">نبذة عني</h2>
          <div class="content flex-center">
-             <div class="about-img" data-aos="fade-right" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+             <div class="about-img" data-aos="fade-left" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
                  <img src="assets/img/profilepicture3.webp" alt="trophy picture" width="" height="">
              </div>
              <div class="about-info" data-aos="fade-down" data-aos-offset="200" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
@@ -151,11 +164,11 @@
          <h1 class="section-title-01" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">المهارات</h1>
          <h2 class="section-title-02">المهارات</h2>
          <div class="content">
-             <div class="skills-description" data-aos="flip-right" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+             <div class="skills-description" data-aos="flip-left" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
                  <h3>التعليم والمهارات</h3>
              </div>
              <div class="skills-info education-all">
-                 <div class="education" data-aos="fade-right" data-aos-offset="200" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
+                 <div class="education" data-aos="fade-left" data-aos-offset="200" data-aos-delay="100" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
                      <h4><label>التعليم</label></h4>
                      <ul class="edu-list">
                          <li class="item">
@@ -228,7 +241,7 @@
                 </div>
                 <div class="experience-card">
                     <div class="upper">
-                        <h3>مطور ويب أول وأخصائي تكنولوجيا المعلومات</h3>
+                        <h3>مطور ويب وبرامج</h3>
                         <h5>مستقل | عن بعد</h5>
                         <span>سبتمبر 2020 - أغسطس 2022</span>
                     </div>
@@ -243,7 +256,7 @@
                         <span>July 2019 - Sept 2020</span>
                     </div>
                     <div class="hr"></div>
-                    <h4><label>التميمي للخدمات الصناعية,السعودية</label></h4>
+                    <h4><label>التميمي,السعودية</label></h4>
                     <p>صيانة/تحديث وتحسين موقع الشركة الإلكتروني وإدارة حسابات وسائل التواصل الاجتماعي!</p>
                 </div>
                 <div class="experience-card">
@@ -258,12 +271,12 @@
                 </div>
                 <div class="experience-card">
                     <div class="upper">
-                        <h3>مطور و أخصائي دعم تكنولوجيا المعلومات</h3>
+                        <h3>مطور و أخصائي دعم تكنولوجيا</h3>
                         <h5>دوام كامل | وكالة</h5>
                         <span>أغسطس 2012 - سبتمبر 2018</span>
                     </div>
                     <div class="hr"></div>
-                    <h4><label>التميمي للخدمات الصناعية,السعودية</label></h4>
+                    <h4><label>التميمي,السعودية</label></h4>
                     <p>حل المشكلات التقنية وإصلاح مشكلات الكمبيوتر و عبر الهاتف والدردشة الحية</p>
                 </div>
                 <div class="experience-card">
@@ -317,7 +330,7 @@
                  <li class="service-container">
                      <div class="service-card">
                          <i class="fas fa-hard-drive"></i>
-                         <h3>اختبار البرمجيات والأجهزة</h3>
+                         <h3>اختبار البرمجيات</h3>
                          <div class="learn-more-btn">تعرف على المزيد <i class="fas fa-long-arrow-alt-right"></i></div>
                      </div>
                      <div class="service-modal flex-center">
@@ -340,7 +353,7 @@
                  <li class="service-container">
                     <div class="service-card">
                         <i class="fas fa-computer-mouse"></i>
-                        <h3>أخصائي تكنولوجيا المعلومات</h3>
+                        <h3>تكنولوجيا المعلومات</h3>
                         <div class="learn-more-btn">تعرف على المزيد <i class="fas fa-long-arrow-alt-right"></i></div>
                     </div>
                     <div class="service-modal flex-center">
@@ -362,7 +375,7 @@
                 <li class="service-container">
                     <div class="service-card">
                         <i class="fas fa-align-left"></i>
-                        <h3>كتابة المحتوى</h3>
+                        <h3>كتابة<br> المحتوى</h3>
                         <div class="learn-more-btn">تعرف على المزيد <i class="fas fa-long-arrow-alt-right"></i></div>
                     </div>
                     <div class="service-modal flex-center">
@@ -383,7 +396,7 @@
                 <li class="service-container">
                     <div class="service-card">
                         <i class="fa-solid fa-brain"></i>
-                        <h3> تحليل البيانات</h3>
+                        <h3> تحليل <br>البيانات</h3>
                         <div class="learn-more-btn">تعرف على المزيد <i class="fas fa-long-arrow-alt-right"></i></div>
                     </div>
                     <div class="service-modal flex-center">
@@ -982,28 +995,30 @@
 
                 });
       // Show the modal when the page loads
-      document.addEventListener('DOMContentLoaded', () => {
-            const languageModal = new bootstrap.Modal(document.getElementById('languageModal'), {
-                backdrop: 'static',
-                keyboard: false
-            });
+      // Show language modal when button is clicked
+      function showLanguageChanger() {
+            const languageModal = new bootstrap.Modal(document.getElementById('languageModal'));
             languageModal.show();
-        });
+        }
 
         // Redirect to the selected language page
-        function redirectToPage(language) {
-            const languageModal = bootstrap.Modal.getInstance(document.getElementById('languageModal'));
-            if (language === 'ar') {
-                // Close the modal for English
-                languageModal.hide();
-            } else if (language === 'fr') {
-                // Redirect to the French page
-                window.location.href = 'index_fr.html';
-            } else if (language === 'en') {
-                // Redirect to the Arabic page
-                window.location.href = 'index.html';
+        function redirectToPage(page) {
+    localStorage.setItem('selectedLanguage', page); // Save language selection
+    window.location.href = page; // Redirect to the appropriate page
+}
+
+
+        // Show the modal only if no language is selected or Arabic is not selected
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectedLanguage = localStorage.getItem('selectedLanguage');
+            if (!selectedLanguage || selectedLanguage !== 'index_ar.html') {
+                const languageModal = new bootstrap.Modal(document.getElementById('languageModal'), {
+                    backdrop: 'static',
+                    keyboard: false
+                });
+                languageModal.show();
             }
-        }
+        });
     </script>
 </body>
 </html>
