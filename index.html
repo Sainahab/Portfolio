@@ -50,7 +50,7 @@
             <div class="modal-body text-center">
                 <p>Select your preferred language to continue:</p>
                 <div class="d-flex justify-content-around">
-                  <a class="flagg" onclick="redirectToPage('index.html')"><img src="assets/img/en.webp" alt="English language"></a>
+                  <a class="flagg" onclick="redirectToPage('index_updated.html')"><img src="assets/img/en.webp" alt="English language"></a>
                   <a class="flagg" onclick="redirectToPage('index_fr.html')"><img src="assets/img/fr.webp" alt="French Language"></a>
                   <a class="flagg" onclick="redirectToPage('index_ar.html')"><img src="assets/img/ar.webp" alt="Arabic Language"></a>
                 </div>
@@ -71,7 +71,7 @@
               <a href="#services">Services</a>
               <a href="#portfolio">My Work</a>
               <a href="#contact">Contact</a>
-              <a href="#" onclick="showLanguageChanger()"><img src="assets/img/globe.png" style="width: 30px;" >
+              <a href="#" onclick="showLanguageChanger()"><img src="assets/img/globe.webp" style="width: 30px;" >
               <a href=""></a>
             </a>
           </div>
@@ -485,13 +485,26 @@
       <div class="services-description" data-aos="fade-top" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-mirror="true">
           <h3>Check My Work</h3>
       </div>
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="row" data-aos="fade-up" data-aos-delay="100"> <!-- Row for Main Filters -->
             <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="portfolio-flters">
                     <li data-filter="*" class="filter-active">All</li>
                     <li data-filter=".filter-web">Websites</li>
                     <li data-filter=".filter-app">Apps</li>
                     <li data-filter=".filter-card">Software Testing</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="150"> <!-- Row for Sub Filters -->
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="portfolio-sub-flters" class="portfolio-sub-filters-list" style="display: none;">
+                    <li data-filter=".filter-web-ecommerce" class="portfolio-sub-filter">Retail / Ecommerce</li>
+                    <li data-filter=".filter-web-realestate" class="portfolio-sub-filter">Rentals / Real Estate</li>
+                    <li data-filter=".filter-web-corporate" class="portfolio-sub-filter">Agency / Corporate</li>
+                    <li data-filter=".filter-web-blog" class="portfolio-sub-filter">Blog / Community</li>
+                    <li data-filter=".filter-web-event" class="portfolio-sub-filter">Event</li>
+                    <li data-filter=".filter-web-med" class="portfolio-sub-filter">Medical</li>
+                    <li data-filter=".filter-web-management" class="portfolio-sub-filter">management</li>
                 </ul>
             </div>
         </div>
@@ -510,7 +523,7 @@
              </div>
            </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-corporate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/website1b.webp" class="img-fluid" alt="Tamimi & CO website picture">
               <div class="portfolio-info">
@@ -524,7 +537,52 @@
             </div>
           </div>
           
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-realestate">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/sor.webp" class="img-fluid" alt="Riad Booking Website picture">
+              <div class="portfolio-info">
+                <h4>Riad Dar Souran</h4>
+                <p>Riad Booking Website</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/sor2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.darsouran.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-realestate">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/Kridari.webp" class="img-fluid" alt="Airbnb Conciergerie Management
+ website picture">
+              <div class="portfolio-info">
+                <h4>Kridari</h4>
+                <p>Conciergerie Management Website</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/Kridari1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.kridari.ma/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-management">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/ismopos.webp" class="img-fluid" alt="POS management website">
+              <div class="portfolio-info">
+                <h4>iSMOPOS</h4>
+                <p>POS Terminal and Software Provider</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/ismopos2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.ismopos.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-blog">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/taragalte.webp" class="img-fluid" alt="livraini website picture">
               <div class="portfolio-info">
@@ -538,7 +596,7 @@
             </div>
           </div>
     
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/livraini main.webp" class="img-fluid" alt="livraini website picture">
               <div class="portfolio-info">
@@ -552,7 +610,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-blog">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/irongirlsmain.webp" class="img-fluid" alt="iron ring girls website picture" width="460px">
               <div class="portfolio-info">
@@ -564,24 +622,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div>          
 
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap portbor">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
-                  <a href="portfolio-details.html" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/new.webp" class="img-fluid" alt="soulsborn website picture">
               <div class="portfolio-info">
@@ -595,7 +638,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-corporate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/signworks.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
@@ -609,7 +652,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-realestate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/ii1.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
@@ -623,7 +666,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/pc.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
@@ -636,7 +679,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-realestate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/miltos s.webp" class="img-fluid" alt="Luxury Home Rental">
               <div class="portfolio-info">
@@ -650,7 +693,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/nifty.webp" class="img-fluid" alt="nifty website picture">
               <div class="portfolio-info">
@@ -664,7 +707,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-event">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/nia.webp" class="img-fluid" alt="nifty website picture">
               <div class="portfolio-info">
@@ -679,7 +722,7 @@
           </div>
 
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-corporate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/b.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
@@ -693,7 +736,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-blog">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/me.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
@@ -707,7 +750,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-realestate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/aa1.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
@@ -721,7 +764,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-corporate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/id.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
@@ -735,7 +778,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/old.webp" class="img-fluid" alt="soulsborn website picture">
               <div class="portfolio-info">
@@ -749,7 +792,21 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-med">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/mark.webp" class="img-fluid" alt="Hair Transplant website picture" width="460px">
+              <div class="portfolio-info">
+                <h4>Neografters</h4>
+                <p>Hair Transplant website</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/mark1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://dev.neografters.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-corporate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/website6.webp" class="img-fluid" alt="tamimi group website picture" width="460px">
               <div class="portfolio-info">
@@ -763,7 +820,7 @@
             </div>
           </div>
           
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-management">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/dc.webp" class="img-fluid" alt="tamimi group website picture" width="460px">
               <div class="portfolio-info">
@@ -792,7 +849,7 @@
 
 
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-event">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/website4.webp" class="img-fluid" alt="ecater website picture" width="460px">
               <div class="portfolio-info">
@@ -806,7 +863,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/website3.webp" class="img-fluid" alt="allysbar website picture" width="460px">
               <div class="portfolio-info">
@@ -820,7 +877,21 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/ss.webp" class="img-fluid" alt="SOS Shop website picture" width="460px">
+              <div class="portfolio-info">
+                <h4>SOS Shop</h4>
+                <p>Long terme Essencials Shop</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/ss1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://sos-shop.ch/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-med">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/medic.webp" class="img-fluid" alt="Medics website picture" width="460px">
               <div class="portfolio-info">
@@ -829,6 +900,20 @@
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/doc.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
                   <a href="https://bluewrenacupuncture.com.au" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-corporate">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/logi.webp" class="img-fluid" alt="Logistics expert website image">
+              <div class="portfolio-info">
+                <h4>LogisticaMed</h4>
+                <p>Logistics Expert</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/logi2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.logisticamed.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>

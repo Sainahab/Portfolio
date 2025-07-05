@@ -81,7 +81,7 @@
               <a href="#services">الخدمات</a>
               <a href="#portfolio">أعمالي</a>
               <a href="#contact">اتصل بي</a>
-              <a href="#" onclick="showLanguageChanger()"><img src="assets/img/globe.png" style="width: 30px;" >
+              <a href="#" onclick="showLanguageChanger()"><img src="assets/img/globe.webp" style="width: 30px;" >
               <a href=""></a>
             </a>
           </div>
@@ -499,306 +499,363 @@
           <h3>>تفقد أعمالي</h3>
       </div>
 
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="row" data-aos="fade-up" data-aos-delay="100"> <!-- Row for Main Filters -->
             <div class="col-lg-12 d-flex justify-content-center">
                 <ul id="portfolio-flters">
-                  <li data-filter="*" class="filter-active">الكل</li>
-                  <li data-filter=".filter-web">مواقع الويب</li>
-                  <li data-filter=".filter-app">التطبيقات</li>
-                  <li data-filter=".filter-card">اختبار البرمجيات</li>                  
+                    <li data-filter="*" class="filter-active">كل</li>
+                    <li data-filter=".filter-web">مواقع الويب</li>
+                    <li data-filter=".filter-app">التطبيقات</li>
+                    <li data-filter=".filter-card">اختبار البرمجيات</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="150"> <!-- Row for Sub Filters -->
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="portfolio-sub-flters" class="portfolio-sub-filters-list" style="display: none;">
+                    <li data-filter=".filter-web-ecommerce" class="portfolio-sub-filter">متجر / التجارة الإلكترونية</li>
+                    <li data-filter=".filter-web-realestate" class="portfolio-sub-filter">إيجارات / عقارات</li>
+                    <li data-filter=".filter-web-corporate" class="portfolio-sub-filter">وكالة / شركة</li>
+                    <li data-filter=".filter-web-blog" class="portfolio-sub-filter">مدونة / مجتمع</li>
+                    <li data-filter=".filter-web-event" class="portfolio-sub-filter">حدث</li>
+                    <li data-filter=".filter-web-med" class="portfolio-sub-filter">طبي</li>
+                    <li data-filter=".filter-web-management" class="portfolio-sub-filter">إدارة</li>
                 </ul>
             </div>
         </div>
         
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
             
-            <div class="col-lg-4 col-md-4 portfolio-item filter-card">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
              <div class="portfolio-wrap portbor">
                <img src="assets/img/portfolio/school.webp" class="img-fluid" alt="school software testing">
                <div class="portfolio-info">
-                 <h4>اختبار برمجيات المدرسية</h4>
+                 <h4>school software testing</h4>
                  <div class="portfolio-links">
-                   <a href="assets/img/portfolio/school.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                   <a href="assets/img/portfolio/school.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
                  </div>
                </div>
              </div>
            </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-corporate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/website1b.webp" class="img-fluid" alt="Tamimi & CO website picture">
               <div class="portfolio-info">
                 <h4>Tamimi & CO</h4>
-                <p>موقع ويب لشركة قانونية</p>
+                <p>Lawfirm Corporate Website</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/tamimi2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://www.tamimi.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/tamimi2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.tamimi.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
           
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-realestate">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/sor.webp" class="img-fluid" alt="Riad Booking Website picture">
+              <div class="portfolio-info">
+                <h4>Riad Dar Souran</h4>
+                <p>Riad Booking Website</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/sor2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.darsouran.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-realestate">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/Kridari.webp" class="img-fluid" alt="Airbnb Conciergerie Management
+ website picture">
+              <div class="portfolio-info">
+                <h4>Kridari</h4>
+                <p>Conciergerie Management Website</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/Kridari1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.kridari.ma/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-management">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/ismopos.webp" class="img-fluid" alt="POS management website">
+              <div class="portfolio-info">
+                <h4>iSMOPOS</h4>
+                <p>POS Terminal and Software Provider</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/ismopos2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.ismopos.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-blog">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/taragalte.webp" class="img-fluid" alt="livraini website picture">
               <div class="portfolio-info">
                 <h4>Taragalte</h4>
                 <p>Taragalte Music Festival website</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/taragalte2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://www.taragalte.org/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/taragalte2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.taragalte.org/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
     
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/livraini main.webp" class="img-fluid" alt="livraini website picture">
               <div class="portfolio-info">
                 <h4>Livarini</h4>
-                <p>موقع ويب لشركة إدارة الوجبات الخفيفة</p>
+                <p>Website for a Food Management Company</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/livraini.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://livraini.ma" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/livraini.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://livraini.ma" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-blog">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/irongirlsmain.webp" class="img-fluid" alt="iron ring girls website picture" width="460px">
               <div class="portfolio-info">
                 <h4>Iron Ring Girls</h4>
-                <p>موقع ويب لمجتمع النساء في الهندسة</p>
+                <p>women in engineering community  website</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/irongirls.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://www.ironringgirls.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/irongirls.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.ironringgirls.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
-          </div>
+          </div>          
 
-          <!-- <div class="col-lg-4 col-md-4 portfolio-item filter-card">
-            <div class="portfolio-wrap portbor">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="portfolio-details.html" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          
-
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/new.webp" class="img-fluid" alt="soulsborn website picture">
               <div class="portfolio-info">
                 <h4>soulsborn Marketplace</h4>
-                <p>متجر رونات إلدن رينغ</p>
+                <p>elden ring runes shop</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/long.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://soulsborn.com" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/long.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://soulsborn.com" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-corporate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/signworks.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
                 <h4>Signworks LLC</h4>
-                <p>صفحة وكالة رقمية مقرها في طنجة</p>
+                <p>Digital Agency Landing page based in Tangier</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/signworks s1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://signworks.ma" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/signworks s1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://signworks.ma" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-realestate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/ii1.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
                 <h4>Issa Imobilier</h4>
-                <p>العقارات مقرها في طنجة</p>
+                <p>Real Estate based in Tangier</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/ii.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://www.issaimmobilier.ma/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/ii.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.issaimmobilier.ma/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/pc.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
                 <h4>PC Shop</h4>
-                <p>متجر لابتوبات واكسسوارات مقرها في طنجة</p>
+                <p>Laptops and accessoies shop based in Casablanca</p>
                 <div class="portfolio-links">
-                  <a href="https://pc-shop.ma/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="https://pc-shop.ma/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-realestate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/miltos s.webp" class="img-fluid" alt="Luxury Home Rental">
               <div class="portfolio-info">
                 <h4>Miltos Sivota Luxury Home</h4>
-                <p>إيجار منزل فاخر في اليونان</p>
+                <p>Luxury Home Rental in greece</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/miltos.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://miltos-sivotaluxuryhome.com/" target="_blank" title="Luxury Home Rental"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/miltos.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://miltos-sivotaluxuryhome.com/" target="_blank" title="Luxury Home Rental"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/nifty.webp" class="img-fluid" alt="nifty website picture">
               <div class="portfolio-info">
                 <h4>nifty Marketplace</h4>
-                <p>سوق العملات المشفرة وNFT</p>
+                <p>Crypto and NFT Marketplace</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/nifty.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://www.niftysouq.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/nifty.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.niftysouq.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-event">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/nia.webp" class="img-fluid" alt="nifty website picture">
               <div class="portfolio-info">
                 <h4>Wedding Website</h4>
-                <p>نظام حجز زواج ومعلومات المكان</p>
+                <p>wedding resevation and venue information system</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/nia2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://theniageowedding.com/de/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/nia2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://theniageowedding.com/de/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-corporate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/b.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
                 <h4>Basique Conseil</h4>
-                <p>صفحة وكالة مقرها في الدار البيضاء</p>
+                <p>Agency Landing page based in Casablanca</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/bc2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://basiqueconseil.ma/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/bc2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://basiqueconseil.ma/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-blog">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/me.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
                 <h4>marocaines eternelles</h4>
-                <p>مدونة للنساء المغربيات</p>
+                <p>Blog for Moroccan women</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/me2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://marocaineseternelles.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/me2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://marocaineseternelles.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-realestate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/aa1.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
                 <h4>Aafer Imobilier</h4>
-                <p>العقارات مقرها في طنجة</p>
+                <p>Real Estate Agency</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/aa.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://aaferimmobilier.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/aa.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://aaferimmobilier.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-corporate">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/id.webp" class="img-fluid" alt="Digital Agency Landing page based in Tangier">
               <div class="portfolio-info">
                 <h4>Idvalue</h4>
-                <p>صفحة وكالة الشركات</p>
+                <p>Companies Agency page</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/id2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="http://idvalue.ma/home/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/id2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="http://idvalue.ma/home/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/old.webp" class="img-fluid" alt="soulsborn website picture">
               <div class="portfolio-info">
                 <h4>Elden Marketplace</h4>
-                <p>متجر الرونات</p>
+                <p>Runes shop</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/soulsborn.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://old.soulsborn.com" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/soulsborn.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://old.soulsborn.com" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-med">
             <div class="portfolio-wrap portbor">
-              <img src="assets/img/portfolio/website6.webp" class="img-fluid" alt="tamimi group website picture" width="460px">
+              <img src="assets/img/portfolio/mark.webp" class="img-fluid" alt="Hair Transplant website picture" width="460px">
               <div class="portfolio-info">
-                <h4>Tamimi Global</h4>
-                <p>صفحة وكالة الشركات</p>
+                <h4>Neografters</h4>
+                <p>Hair Transplant website</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/tamimiglobal.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://tamimigroup.com.sa/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/mark1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://dev.neografters.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
           
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-corporate">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/website6.webp" class="img-fluid" alt="tamimi group website picture" width="460px">
+              <div class="portfolio-info">
+                <h4>Tamimi Global</h4>
+                <p>Group of companies corporate website</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/tamimiglobal.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://tamimigroup.com.sa/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-management">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/dc.webp" class="img-fluid" alt="tamimi group website picture" width="460px">
               <div class="portfolio-info">
                 <h4>digicaisse</h4>
                 <p>Digital POS SAAS websites</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/dc1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://digicaisse.pro/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/dc1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://digicaisse.pro/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/engines.webp" class="img-fluid" alt="engines software testing">
               <div class="portfolio-info">
-                <h4>اختبار البرمجيات</h4>
+                <h4>Engine's Software Testing</h4>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/engines.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
+                  <a href="assets/img/portfolio/engines.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
                 </div>
               </div>
             </div>
@@ -806,43 +863,71 @@
 
 
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-event">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/website4.webp" class="img-fluid" alt="ecater website picture" width="460px">
               <div class="portfolio-info">
                 <h4>Ecater</h4>
-                <p>موقع ويب لمزود خدمة التموين</p>
+                <p>catering service provider website</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/website4b.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://ecater.io/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/website4b.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://ecater.io/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/website3.webp" class="img-fluid" alt="allysbar website picture" width="460px">
               <div class="portfolio-info">
                 <h4>Ally's Bar</h4>
-                <p>موقع ويب للحانة ومتجر المشروبات</p>
+                <p>Website for Bar and drink shop</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/website3b.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://www.allysbar.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/website3b.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.allysbar.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-ecommerce">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/ss.webp" class="img-fluid" alt="SOS Shop website picture" width="460px">
+              <div class="portfolio-info">
+                <h4>SOS Shop</h4>
+                <p>Long terme Essencials Shop</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/ss1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://sos-shop.ch/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-med">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/medic.webp" class="img-fluid" alt="Medics website picture" width="460px">
               <div class="portfolio-info">
                 <h4>Blue Wren Acupuncture</h4>
-                <p>موقع العيادة الطبية</p>
+                <p>Medical Clinic website</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/doc.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">عرض المزيد</button></a>
-                  <a href="https://bluewrenacupuncture.com.au" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">بزيارة الموقع</button></a>
+                  <a href="assets/img/portfolio/doc.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://bluewrenacupuncture.com.au" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-web-corporate">
+            <div class="portfolio-wrap portbor">
+              <img src="assets/img/portfolio/logi.webp" class="img-fluid" alt="Logistics expert website image">
+              <div class="portfolio-info">
+                <h4>LogisticaMed</h4>
+                <p>Logistics Expert</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/logi2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" ><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">see more</button></a>
+                  <a href="https://www.logisticamed.com/" target="_blank" title="More Details"><button class="btnfolio" style="font-size: 15px; padding: 10px; border-radius: 10px; background: var(--second-color); color: white;">Visite Website</button></a>
                 </div>
               </div>
             </div>
