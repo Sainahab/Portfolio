@@ -1,5 +1,3 @@
-// Existing JS code from script.js ... (Keep the original code)
-
 // //Navigation Bar Effects On Scroll
 // window.addEventListener("scroll", function(){
 //     const header = document.querySelector("header");
@@ -132,7 +130,7 @@
 //Navigation Bar Effects On Scroll
 window.addEventListener("scroll", function(){
     const header = document.querySelector("header");
-    // Add scroll effects if needed
+
 });    
 
 //Services Section - Modal
@@ -141,9 +139,7 @@ const learnmoreBtns = document.querySelectorAll(".learn-more-btn");
 const modalCloseBtns = document.querySelectorAll(".modal-close-btn");
 
 var modal = function(modalClick){
-    if (serviceModals[modalClick]) {
-        serviceModals[modalClick].classList.add("active");
-    }
+    serviceModals[modalClick].classList.add("active");
 }
 
 learnmoreBtns.forEach((learnmoreBtn, i) => {
@@ -161,175 +157,54 @@ modalCloseBtns.forEach((modalCloseBtn) => {
 });
 
 
-//Our Client - swiper (Assuming Swiper library is included in HTML)
-try {
-    var swiper = new Swiper(".client-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-} catch (e) {
-    console.log("Swiper not initialized. Ensure Swiper library is loaded.");
-}
+
+
+//Our Client - swiper
+
+var swiper = new Swiper(".client-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 
 
 //Website dark/light theme
 const themeBtn = document.querySelector(".theme-btn");
 
-if (themeBtn) {
-    themeBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark-theme");
-        themeBtn.classList.toggle("sun");
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+    themeBtn.classList.toggle("sun");
 
-        localStorage.setItem("saved-theme", getCurrentTheme());
-        localStorage.setItem("saved-icon", getCurrentIcon());
-    });
+    localStorage.setItem("saved-theme", getCurrentTheme());
+    localStorage.setItem("saved-icon", getCurrentIcon());
+});
 
-    const getCurrentTheme = () => document.body.classList.contains("dark-theme") ? "dark" : "light";
-    const getCurrentIcon = () => themeBtn.classList.contains("sun") ? "sun" : "moon";
+const getCurrentTheme = () => document.body.classList.contains("dark-theme") ? "dark" : "light";
+const getCurrentIcon = () => themeBtn.classList.contains("sun") ? "sun" : "moon";
 
-    const savedTheme = localStorage.getItem("saved-theme");
-    const savedIcon = localStorage.getItem("saved-icon");
+const savedTheme = localStorage.getItem("saved-theme");
+const savedIcon = localStorage.getItem("saved-icon");
 
-    if(savedTheme){
-        document.body.classList[savedTheme === "dark" ? "add" : "remove"]("dark-theme");
-        themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("sun");
-    }
+if(savedTheme){
+    document.body.classList[savedTheme === "dark" ? "add" : "remove"]("dark-theme");
+    themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("sun");
 }
 
 //Scroll To Top Button
 const scrollToTopBtn = document.querySelector(".scrollToTop-btn");
 
-if (scrollToTopBtn) {
-    window.addEventListener("scroll", function(){
-        scrollToTopBtn.classList.toggle("active", window.scrollY > 500)
-    });
-
-    scrollToTopBtn.addEventListener("click", () => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    });
-}
-
-//Navigation menu items active on page scroll
-window.addEventListener("scroll", () => {
-    const sections = document.querySelectorAll("section[id]"); // Ensure sections have IDs
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(current => {
-        let sectionHeight = current.offsetHeight;
-        let sectionTop = current.offsetTop - 50;
-        let id = current.getAttribute("id");
-        let navLink = document.querySelector(".nav-items a[href*=" + id + "]");
-
-        if (navLink) { // Check if the link exists
-            if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-                navLink.classList.add("active");
-            }
-            else{
-                navLink.classList.remove("active");
-            }
-        }
-    });
-    // Ensure the first link is active if scrolled to the top
-    let homeLink = document.querySelector(".nav-items a[href*=\"#home\"]");
-    if (homeLink && scrollY < sections[0].offsetTop - 50) {
-         // Deactivate others, activate home
-         document.querySelectorAll(".nav-items a.active").forEach(a => a.classList.remove("active"));
-         homeLink.classList.add("active");
-    }
+window.addEventListener("scroll", function(){
+    scrollToTopBtn.classList.toggle("active", window.scrollY > 500)
 });
 
-// Responsive navigation menu toggle
-const menuBtn = document.querySelector(".nav-menu-btn");
-const closeBtn = document.querySelector(".nav-close-btn");
-const navigation = document.querySelector(".navigation");
-const navItems = document.querySelectorAll(".navigation .nav-items a"); // Select links within nav-items
-
-if (menuBtn && closeBtn && navigation) {
-    menuBtn.addEventListener("click", () => {
-        navigation.classList.add("active");
-    });
-
-    closeBtn.addEventListener("click", () => {
-        navigation.classList.remove("active");
-    });
-
-    // Close the menu when clicking on any menu item
-    navItems.forEach((item) => {
-        item.addEventListener("click", () => {
-            navigation.classList.remove("active");
-        });
-    });
-
-    // Close the menu when clicking outside of it
-    document.addEventListener("click", (event) => {
-        if (!navigation.contains(event.target) && event.target !== menuBtn && navigation.classList.contains("active")) {
-            navigation.classList.remove("active");
-        }
-    });
-}
-
-// Language Modal Logic (Example - requires Bootstrap JS)
-function showLanguageChanger() {
-    try {
-        var languageModal = new bootstrap.Modal(document.getElementById("languageModal"));
-        languageModal.show();
-    } catch (e) {
-        console.error("Bootstrap Modal could not be initialized. Ensure Bootstrap JS is loaded.");
-    }
-}
-
-function redirectToPage(url) {
-    window.location.href = url;
-}
-
-// Typing effect for profession (Example)
-const prosElement = document.getElementById("pros");
-if (prosElement) {
-    const professions = ["Software Developer", "Web Designer", "IT Specialist"];
-    let currentProfessionIndex = 0;
-    let currentCharIndex = 0;
-    let isDeleting = false;
-
-    function typeProfession() {
-        const currentProfession = professions[currentProfessionIndex];
-        let text = "."; // Start with a placeholder or empty
-
-        if (isDeleting) {
-            text = currentProfession.substring(0, currentCharIndex - 1);
-            currentCharIndex--;
-        } else {
-            text = currentProfession.substring(0, currentCharIndex + 1);
-            currentCharIndex++;
-        }
-
-        prosElement.textContent = text;
-
-        let typeSpeed = isDeleting ? 100 : 200;
-
-        if (!isDeleting && currentCharIndex === currentProfession.length) {
-            typeSpeed = 2000; // Pause at end
-            isDeleting = true;
-        } else if (isDeleting && currentCharIndex === 0) {
-            isDeleting = false;
-            currentProfessionIndex = (currentProfessionIndex + 1) % professions.length;
-            typeSpeed = 500; // Pause before typing next
-        }
-
-        setTimeout(typeProfession, typeSpeed);
-    }
-    // Start typing effect after a delay
-    setTimeout(typeProfession, 1000);
-}
 
 // Portfolio Filtering Logic - INTEGRATED WITH ISOTOPE
 document.addEventListener("DOMContentLoaded", () => {
@@ -435,26 +310,54 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+scrollToTopBtn.addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
 
+//Navigation menu items active on page scroll
+window.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll("section");
+    const scrollY = window.pageYOffset;
 
-// Ensure AOS is initialized (check HTML includes)
-try {
-    AOS.init({
-        duration: 1000,
-        easing: 'ease-in-out',
-        once: true, // Set to false if you want animations on every scroll
-        mirror: false
+    sections.forEach(current => {
+        let sectionHeight = current.offsetHeight;
+        let sectionTop = current.offsetTop - 50;
+        let id = current.getAttribute("id");
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector(".nav-items a[href*=" + id + "]").classList.add("active");
+        }
+        else{
+            document.querySelector(".nav-items a[href*=" + id + "]").classList.remove("active");
+        }
     });
-} catch (e) {
-    console.log("AOS not initialized. Ensure AOS library is loaded and initialized.");
-}
+});
+// Responsive navigation menu toggle
+const menuBtn = document.querySelector(".nav-menu-btn");
+const closeBtn = document.querySelector(".nav-close-btn");
+const navigation = document.querySelector(".navigation");
 
-// Ensure GLightbox is initialized (check HTML includes)
-try {
-    const portfolioLightbox = GLightbox({
-        selector: '.portfolio-lightbox'
+menuBtn.addEventListener("click", () => {
+    navigation.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+    navigation.classList.remove("active");
+});
+
+// Close the menu when clicking on any menu item
+const menuItems = document.querySelectorAll(".navigation a");
+
+menuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+        navigation.classList.remove("active");
     });
-} catch (e) {
-    console.log("GLightbox not initialized. Ensure GLightbox library is loaded.");
-}
+});
 
+// Close the menu when clicking outside of it
+document.addEventListener("click", (event) => {
+    if (!navigation.contains(event.target) && event.target !== menuBtn) {
+        navigation.classList.remove("active");
+    }
+});
