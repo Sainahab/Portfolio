@@ -165,7 +165,7 @@ header.sticky {
 .nav-bar {
   position: relative;
   height: calc(4rem + 1rem);
-  max-width: 1250px;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -216,7 +216,7 @@ header.sticky .nav-bar {
 /*==========Home Section=========*/
 .home {
   position: relative;
-  max-width: 1250px;
+  max-width: 1400px;
   min-width: 100vh;
   margin-left: auto;
   margin-right: auto;
@@ -1127,7 +1127,7 @@ footer a {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1150px;
+  max-width: 1400px;
 }
 
 .footer-container .about h2 {
@@ -1200,6 +1200,17 @@ footer a {
   text-align: center;
 }
 
+@media screen and (min-width: 2000px) {
+  /*=======Header navigation menu=======*/
+  .home-container .home-img img {
+    top: -15rem;
+        left: -40rem;
+  }
+  .home-container .ar-img img {
+    top: -15rem;
+        right: -45rem;
+  }
+}
 /*=======Media query max-width 1070px=======*/
 @media screen and (max-width: 1600px) {
   /*=======Header navigation menu=======*/
