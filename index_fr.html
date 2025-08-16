@@ -205,19 +205,26 @@
             </div>
         </div>
         <div class="row" data-aos="fade-up" data-aos-delay="150"> <!-- Row for Sub Filters -->
-            <div class="col-lg-12 d-flex justify-content-center">
-                <ul id="portfolio-sub-flters" class="portfolio-sub-filters-list" style="display: none;">
-                    <li data-filter=".filter-web-ecommerce" class="portfolio-sub-filter">Boutique / Ecommerce</li>
-                    <li data-filter=".filter-web-realestate" class="portfolio-sub-filter">Locations / Immobilier</li>
-                    <li data-filter=".filter-web-corporate" class="portfolio-sub-filter">Agence / Entreprise</li>
-                    <li data-filter=".filter-web-blog" class="portfolio-sub-filter">Blog / Communauté</li>
-                    <li data-filter=".filter-web-event" class="portfolio-sub-filter">Evenement</li>
-                    <li data-filter=".filter-web-med" class="portfolio-sub-filter">Médicale</li>
-                    <li data-filter=".filter-web-management" class="portfolio-sub-filter">management</li>
-                </ul>
+          <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="portfolio-sub-flters" class="portfolio-sub-filters-list" style="display: none;">
+                <!-- Web sub-filters -->
+                <li data-parent=".filter-web" data-filter=".filter-web-ecommerce">Boutique / E-commerce</li>
+                <li data-parent=".filter-web" data-filter=".filter-web-realestate">Locations / Immobilier</li>
+                <li data-parent=".filter-web" data-filter=".filter-web-corporate">Agence / Entreprise</li>
+                <li data-parent=".filter-web" data-filter=".filter-web-blog">Blog / Communauté</li>
+                <li data-parent=".filter-web" data-filter=".filter-web-event">Événement</li>
+                <li data-parent=".filter-web" data-filter=".filter-web-med">Médical</li>
+                <li data-parent=".filter-web" data-filter=".filter-web-management">Gestion</li>
+
+                <!-- App sub-filters -->
+                <li data-parent=".filter-app" data-filter=".filter-app-retail">Boutique</li>
+                <li data-parent=".filter-app" data-filter=".filter-app-restaurant">Restaurant</li>
+                <li data-parent=".filter-app" data-filter=".filter-app-ecommerce">E-commerce</li>
+                <li data-parent=".filter-app" data-filter=".filter-app-social">Social</li>
+              </ul>
             </div>
-        </div>
-        
+          </div>
+
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
             
             <div class="col-lg-4 col-md-6 portfolio-item filter-card">
@@ -259,7 +266,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app filter-app-pos">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app filter-app-retail">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/ismopos retail.webp" class="img-fluid" alt="Retail POS Application">
               <div class="portfolio-info">
@@ -302,7 +309,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app filter-app-pos">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app filter-app-restaurant">
             <div class="portfolio-wrap portbor">
               <img src="assets/img/portfolio/ismopos restaurant.webp" class="img-fluid" alt="Reataurant POS Application">
               <div class="portfolio-info">

@@ -223,81 +223,78 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // --- Main Filter Logic --- 
-        mainFilters.forEach(filter => {
-            filter.addEventListener("click", function(e) {
-                e.preventDefault();
-                const filterValue = this.getAttribute("data-filter");
-                let effectiveFilterValue = filterValue; // Filter value to pass to Isotope
+// --- Main Filter Logic --- 
+mainFilters.forEach(filter => {
+    filter.addEventListener("click", function(e) {
+        e.preventDefault();
+        const filterValue = this.getAttribute("data-filter");
+        let effectiveFilterValue = filterValue;
 
-                // 1. Update Active State for Main Filters
-                mainFilters.forEach(f => f.classList.remove("filter-active"));
-                this.classList.add("filter-active");
+        // 1. Update active state
+        mainFilters.forEach(f => f.classList.remove("filter-active"));
+        this.classList.add("filter-active");
 
-                // 2. Manage Sub-filter Visibility
-                if (subFiltersContainer) {
-                    if (filterValue === ".filter-web") {
-                        subFiltersContainer.style.display = "block";
-                        // Check if a sub-filter is already active when clicking "Websites"
-                        const activeSubFilter = subFiltersContainer.querySelector("li.filter-active");
-                        if (activeSubFilter) {
-                            // If a sub-filter is active, use its combined filter value
-                            effectiveFilterValue = ".filter-web" + activeSubFilter.getAttribute("data-filter");
-                        } else {
-                            // Otherwise, just use the main .filter-web value
-                            effectiveFilterValue = ".filter-web";
-                        }
-                    } else {
-                        subFiltersContainer.style.display = "none";
-                        subFilters.forEach(sf => sf.classList.remove("filter-active"));
-                    }
-                }
+        // 2. Manage Sub-filter Visibility
+        if (subFiltersContainer) {
+            // Show only sub-filters for selected parent
+            const matchingSubFilters = Array.from(subFilters)
+                .filter(sf => sf.dataset.parent === filterValue);
 
-                // 3. Filter Portfolio Items using Isotope
-                if (portfolioIsotope) {
-                    portfolioIsotope.arrange({
-                        filter: effectiveFilterValue
-                    });
-                    // Optional: Refresh AOS after Isotope arrangement
-                    portfolioIsotope.on("arrangeComplete", function() {
-                        try { AOS.refresh(); } catch(e) {}
-                    });
-                }
-            });
-        });
+            if (matchingSubFilters.length > 0) {
+                subFiltersContainer.style.display = "block";
 
-        // --- Sub-Filter Logic --- 
-        if (subFiltersContainer && webFilterLi) {
-            subFilters.forEach(subFilter => {
-                subFilter.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    event.stopPropagation(); 
-                    const subFilterValue = this.getAttribute("data-filter");
-                    const combinedFilterValue = ".filter-web" + subFilterValue; // e.g., .filter-web.filter-web-ecommerce
-
-                    // 1. Update Active State for Sub-filters
-                    subFilters.forEach(sf => sf.classList.remove("filter-active"));
-                    this.classList.add("filter-active");
-
-                    // 2. Ensure Main "Websites" Filter Remains Visually Active
-                    mainFilters.forEach(f => f.classList.remove("filter-active"));
-                    webFilterLi.classList.add("filter-active");
-                    
-                    // 3. Ensure Sub-filter container remains visible
-                    subFiltersContainer.style.display = "block";
-
-                    // 4. Filter Portfolio Items using Isotope with combined filter
-                    if (portfolioIsotope) {
-                        portfolioIsotope.arrange({
-                            filter: combinedFilterValue
-                        });
-                        // Optional: Refresh AOS after Isotope arrangement
-                        portfolioIsotope.on("arrangeComplete", function() {
-                            try { AOS.refresh(); } catch(e) {}
-                        });
-                    }
+                // Hide unrelated sub-filters
+                subFilters.forEach(sf => {
+                    sf.style.display = (sf.dataset.parent === filterValue) ? "inline-block" : "none";
+                    sf.classList.remove("filter-active");
                 });
-            });
+
+                // If there was an active sub-filter for this parent, use it
+                const activeSubFilter = matchingSubFilters.find(sf => sf.classList.contains("filter-active"));
+                if (activeSubFilter) {
+                    effectiveFilterValue = filterValue + activeSubFilter.getAttribute("data-filter");
+                }
+
+            } else {
+                subFiltersContainer.style.display = "none";
+                subFilters.forEach(sf => sf.classList.remove("filter-active"));
+            }
         }
+
+        // 3. Filter Portfolio Items
+        if (portfolioIsotope) {
+            portfolioIsotope.arrange({ filter: effectiveFilterValue });
+            portfolioIsotope.on("arrangeComplete", () => { try { AOS.refresh(); } catch(e) {} });
+        }
+    });
+});
+
+// --- Sub-Filter Logic --- 
+if (subFiltersContainer) {
+    subFilters.forEach(subFilter => {
+        subFilter.addEventListener("click", function(event) {
+            event.preventDefault();
+            event.stopPropagation(); 
+            const parentFilter = this.dataset.parent;
+            const subFilterValue = this.getAttribute("data-filter");
+            const combinedFilterValue = parentFilter + subFilterValue;
+
+            // 1. Update active states
+            subFilters.forEach(sf => sf.classList.remove("filter-active"));
+            this.classList.add("filter-active");
+            mainFilters.forEach(f => f.classList.remove("filter-active"));
+            const parentLi = document.querySelector(`#portfolio-flters li[data-filter="${parentFilter}"]`);
+            if (parentLi) parentLi.classList.add("filter-active");
+
+            // 2. Filter items
+            if (portfolioIsotope) {
+                portfolioIsotope.arrange({ filter: combinedFilterValue });
+                portfolioIsotope.on("arrangeComplete", () => { try { AOS.refresh(); } catch(e) {} });
+            }
+        });
+    });
+}
+
 
         // Trigger click on "All" filter initially
         const initialFilter = document.querySelector("#portfolio-flters li[data-filter=\"*\"]");
