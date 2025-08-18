@@ -1,0 +1,14 @@
+RewriteEngine On
+DirectoryIndex index.html
+
+# If no cookie, load English by default
+RewriteCond %{HTTP_COOKIE} !lang=(en|fr|ar)
+RewriteRule ^$ index.html [L]
+
+# If cookie says French → serve index_fr.html
+RewriteCond %{HTTP_COOKIE} lang=fr
+RewriteRule ^$ index_fr.html [L]
+
+# If cookie says Arabic → serve index_ar.html
+RewriteCond %{HTTP_COOKIE} lang=ar
+RewriteRule ^$ index_ar.html [L]

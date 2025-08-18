@@ -727,6 +727,75 @@ header.sticky .nav-bar {
   color: var(--second-color);
 }
 
+/* ################ Client Slider LOGO */
+
+.container {
+  overflow: hidden;
+  .slider {
+    animation: slidein 20s linear infinite;
+    white-space: nowrap;
+    .logos {
+      width: 100%;
+      display: inline-block;
+      margin: 0px 0;
+      .fab {
+        width: calc(100% / 10);
+        animation: fade-in 0.1s 
+          cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+      }
+    }
+  }
+}
+
+.client-logo {
+  height: 100px;      /* roughly similar to fa-4x */
+  width: auto;
+  margin: 0 20px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+
+.client-logo:hover {
+  transform: scale3d(1.2);
+}
+
+.ndrow{
+  margin-top: 1rem;
+      animation: slideout 20s linear infinite;
+
+}
+
+
+@keyframes slidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* move half of the duplicated width */
+  }
+}
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/

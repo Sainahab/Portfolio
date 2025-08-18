@@ -358,3 +358,12 @@ document.addEventListener("click", (event) => {
         navigation.classList.remove("active");
     }
 });
+
+document.querySelector('.scroll-down').addEventListener('click', function(event) {
+    event.preventDefault(); // prevent jumping to #clients
+    window.scrollBy({
+        top: 500,  // scroll down by 100px
+        left: 0,
+        behavior: 'smooth'
+    });
+});
