@@ -187,6 +187,22 @@ header.sticky .nav-bar {
   padding-top: 20px;
 }
 
+.mdll{
+      margin-left: -5rem;
+    font-size: medium;
+    margin-top: 5px;
+}
+
+.mdlr{
+    margin-right: -119px;
+    font-size: medium;
+    margin-top: 5px;
+}
+
+body > header > div > a > svg{
+    color: darkred;
+}
+
 .nav-items a {
   color: var(--first-color);
   font-size: var(--normal-font-size);
