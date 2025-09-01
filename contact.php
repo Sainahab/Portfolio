@@ -18,8 +18,8 @@ try {
     $mail->isSMTP();                                      // Set mailer to use SMTP
             $mail->Host = gethostname();  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $mail->Username = 'dev@sainahab.us';                 // SMTP username
-            $mail->Password = 'Saintahab123@';                           // SMTP password
+            $mail->Username = 'do_not_reply@sainahab.us';                 // SMTP username
+            $mail->Password = 'Saintahab123@';                            // SMTP password
             $mail->SMTPSecure = 'ssl';                           // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 465;      
             
@@ -28,7 +28,7 @@ try {
     //Recipients
     $mail->setFrom('dev@sainahab.us', 'Portfolio Contact Form');
     //$mail->setFrom('Donot-reply@signworks.ma', 'Website Contact Form');
-    $mail->addAddress('ahabriyassine@gmail.com');     // Add a recipient
+    $mail->addAddress('Do_not-reply@sainahab.us');     // Add a recipient
 
 
 
