@@ -243,7 +243,7 @@
     tag: "web-development",
     date: "August 20, 2025",
     readTime: "6 min read",
-    url: "blog/en/web-development-website-redesign-signs.html"
+    url: "blog/en/website-redesign-signs.html"
   },
   {
     id: 5,
@@ -253,7 +253,7 @@
     tag: "web-development",
     date: "August 23, 2025",
     readTime: "7 min read",
-    url: "blog/en/web-development-professional-website-morocco.html"
+    url: "blog/en/professional-website-morocco.html"
   },
   {
     id: 6,
@@ -263,7 +263,7 @@
     tag: "web-development",
     date: "August 25, 2025",
     readTime: "6 min read",
-    url: "blog/en/web-development-custom-vs-template-websites.html"
+    url: "blog/en/custom-vs-template-websites.html"
   },
 
   // My Expertise
@@ -307,7 +307,7 @@
     tag: "seo",
     date: "September 5, 2025",
     readTime: "7 min read",
-    url: "blog/en/seo-web-development-trends-morocco.html"
+    url: "blog/en/web-development-trends-morocco.html"
   },
   {
     id: 11,
@@ -317,7 +317,7 @@
     tag: "seo",
     date: "September 7, 2025",
     readTime: "6 min read",
-    url: "blog/en/seo-mobile-apps-morocco.html"
+    url: "blog/en/mobile-apps-morocco.html"
   },
   {
     id: 12,
@@ -428,9 +428,16 @@
 
     // Show language modal when the button in the header is clicked
     function showLanguageChanger() {
-        const languageModal = new bootstrap.Modal(document.getElementById('languageModal'));
-        languageModal.show();
+    const languageModal = new bootstrap.Modal(document.getElementById('languageModal'));
+    languageModal.show();
+}
+function redirectToPage(language) {
+    localStorage.setItem('selectedLanguage', language); // Save language selection in localStorage
+    if (language === 'blog.html' || language === 'blog_fr.html' || language === 'blog_ar.html') {
+        // Redirect to the appropriate page
+        window.location.href = language;
     }
+}
 
     // Check if the modal should be shown on page load
     document.addEventListener('DOMContentLoaded', () => {

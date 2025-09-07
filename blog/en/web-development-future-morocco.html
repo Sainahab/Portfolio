@@ -38,7 +38,7 @@
 .blog-hero {
     position: relative;
     width: 100%;
-    height: 42vh; /* hero height */
+    height: 35vh; /* hero height */
     overflow: hidden;
     border-radius: 10px;
 }
@@ -372,6 +372,29 @@
     font-weight: 500;
 }
 
+.sidebar-section.language-switcher {
+    background-color: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar-section.language-switcher h4 {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sidebar-section.language-switcher a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.sidebar-section.language-switcher a:hover {
+    text-decoration: underline;
+}
 
 @media (max-width: 992px) {
     .blog-wrapper {
@@ -406,7 +429,18 @@
 
     </style>
 </head>
-<body>
+  <body>
+<!-- Scroll To Top Button -->
+  <div class="scrollToTop-btn flex-center">
+      <i class="fas fa-arrow-up"></i>
+  </div>
+  
+  <!-- Light/Dark Theme Button -->
+  <div class="theme-btn flex-center">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+  </div>
+
 
     <!------Header------>
     <header>
@@ -435,7 +469,7 @@
         </div>
     </header> 
 <section class="blog-hero">
-    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+    <img src="../../assets/img/blog/future.webp" 
          alt="Future of web development in Morocco"
          class="blog-hero-image">
     <div class="blog-header">
