@@ -49,172 +49,6 @@
     }
     </script>
     
-    <style>
-        /* Blog-specific styles */
-        .blog-page {
-            padding: 100px 0 50px;
-        }
-        
-        .blog-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .blog-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--heading-color);
-        }
-        
-        .blog-header p {
-            color: var(--text-color);
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .blog-filters {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-            gap: 10px;
-        }
-        
-        .filter-btn {
-            padding: 8px 20px;
-            background-color: var(--bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 500;
-        }
-        
-        .filter-btn:hover, .filter-btn.active {
-            background-color: var(--second-color);
-            color: #fff;
-            border-color: var(--second-color);
-        }
-        
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-        
-        .blog-card {
-            background-color: var(--bg-color);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .blog-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .blog-content {
-            padding: 25px;
-        }
-        
-        .blog-tag {
-            display: inline-block;
-            background-color: var(--second-color);
-            color: #fff;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-bottom: 15px;
-        }
-        
-        .blog-title {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            color: var(--heading-color);
-        }
-        
-        .blog-excerpt {
-            color: var(--text-color);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        
-        .blog-meta {
-            display: flex;
-            justify-content: space-between;
-            color: var(--text-light);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border-color);
-            padding-top: 15px;
-        }
-        
-        .read-more {
-            color: var(--second-color);
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            transition: all 0.3s;
-        }
-        
-        .read-more:hover {
-            color: var(--main-color);
-        }
-        
-        .read-more i {
-            margin-left: 5px;
-            transition: transform 0.3s;
-        }
-        
-        .read-more:hover i {
-            transform: translateX(3px);
-        }
-        
-        .blog-pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
-        }
-        
-        .page-btn {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 5px;
-            border-radius: 50%;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .page-btn:hover, .page-btn.active {
-            background-color: var(--second-color);
-            color: #fff;
-        }
-        
-        @media (max-width: 768px) {
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .blog-header h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -287,15 +121,15 @@
         <div class="content">
             <div class="blog-header">
                 <h3>Latest Articles</h3>
-                <p>Insights on web development, IT solutions, and digital marketing strategies</p>
+                <p>Insights on web development, My Expertise, SEO, and Leads</p>
             </div>
             
             <div class="blog-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="webdev">Web Development</button>
+                <button class="filter-btn" data-filter="web-development">Web Development</button>
+                <button class="filter-btn" data-filter="my-expertise">My Expertise</button>
                 <button class="filter-btn" data-filter="seo">SEO</button>
-                <button class="filter-btn" data-filter="digital">Digital Marketing</button>
-                <button class="filter-btn" data-filter="it">IT Solutions</button>
+                <button class="filter-btn" data-filter="leads">Leads</button>
             </div>
             
             <div class="blog-grid" id="blog-container">
@@ -368,67 +202,135 @@
   <script>
     // Blog data (in a real scenario, this might come from a JSON file or API)
     const blogPosts = [
-        {
-            id: 1,
-            title: "10 Essential SEO Tips for Web Developers",
-            excerpt: "Learn the most effective SEO strategies to implement during website development to boost visibility and rankings.",
-            image: "https://placehold.co/600x400/3498db/ffffff?text=SEO+Tips",
-            tag: "seo",
-            date: "October 15, 2023",
-            readTime: "5 min read",
-            url: "blog/seo-tips.html"
-        },
-        {
-            id: 2,
-            title: "Responsive Web Design Best Practices for 2023",
-            excerpt: "Discover the latest techniques for creating websites that look great on all devices and screen sizes.",
-            image: "https://placehold.co/600x400/2ecc71/ffffff?text=Web+Design",
-            tag: "webdev",
-            date: "October 10, 2023",
-            readTime: "7 min read",
-            url: "blog/responsive-design.html"
-        },
-        {
-            id: 3,
-            title: "Content Strategy for Multilingual Websites",
-            excerpt: "How to create and manage content for websites that serve audiences in multiple languages effectively.",
-            image: "https://placehold.co/600x400/e74c3c/ffffff?text=Content+Strategy",
-            tag: "digital",
-            date: "October 5, 2023",
-            readTime: "6 min read",
-            url: "blog/content-strategy.html"
-        },
-        {
-            id: 4,
-            title: "Cybersecurity Best Practices for Small Businesses",
-            excerpt: "Essential security measures every small business should implement to protect their digital assets.",
-            image: "https://placehold.co/600x400/9b59b6/ffffff?text=Cybersecurity",
-            tag: "it",
-            date: "September 28, 2023",
-            readTime: "8 min read",
-            url: "blog/cybersecurity-tips.html"
-        },
-        {
-            id: 5,
-            title: "The Future of E-commerce: Trends to Watch",
-            excerpt: "Explore the emerging trends that are shaping the future of online shopping and digital commerce.",
-            image: "https://placehold.co/600x400/f39c12/ffffff?text=E-commerce",
-            tag: "digital",
-            date: "September 20, 2023",
-            readTime: "9 min read",
-            url: "blog/ecommerce-trends.html"
-        },
-        {
-            id: 6,
-            title: "Getting Started with React: A Beginner's Guide",
-            excerpt: "A comprehensive introduction to React.js for developers new to this popular JavaScript library.",
-            image: "https://placehold.co/600x400/3498db/ffffff?text=React+JS",
-            tag: "webdev",
-            date: "September 15, 2023",
-            readTime: "10 min read",
-            url: "blog/react-beginners-guide.html"
-        }
-    ];
+  // Leads
+  {
+    id: 1,
+    title: "More Than Facebook: Smarter Lead Generation",
+    excerpt: "Discover why businesses in Morocco need to diversify beyond Facebook ads to generate consistent leads.",
+    image: "assets/img/blog/facebook-vs-website-web.webp",
+    tag: "leads",
+    date: "August 12, 2025",
+    readTime: "6 min read",
+    url: "blog/en/more-than-facebook-page.html"
+  },
+  {
+    id: 2,
+    title: "How Web Projects Boost Revenue in Morocco",
+    excerpt: "Case studies showing how Moroccan businesses increased revenue with professional web projects.",
+    image: "assets/img/blog/revenue.webp",
+    tag: "leads",
+    date: "August 15, 2025",
+    readTime: "7 min read",
+    url: "blog/en/web-projects-revenue-morocco.html"
+  },
+  {
+    id: 3,
+    title: "How to Choose the Right Web Developer in Tangier",
+    excerpt: "A step-by-step guide to selecting the best web developer for your project in Tangier.",
+    image: "assets/img/blog/webdev.webp",
+    tag: "leads",
+    date: "August 18, 2025",
+    readTime: "8 min read",
+    url: "blog/en/how-to-choose-web-developer-tangier.html"
+  },
+
+  // Web Development
+  {
+    id: 4,
+    title: "5 Signs Your Website Needs a Redesign",
+    excerpt: "Learn the warning signs that your website is outdated and losing clients.",
+    image: "assets/img/blog/redesign.webp",
+    tag: "web-development",
+    date: "August 20, 2025",
+    readTime: "6 min read",
+    url: "blog/en/web-development-website-redesign-signs.html"
+  },
+  {
+    id: 5,
+    title: "Why a Professional Website Matters in Morocco",
+    excerpt: "A professional website is key to building trust and growing your Moroccan business.",
+    image: "assets/img/blog/prowebsite.webp",
+    tag: "web-development",
+    date: "August 23, 2025",
+    readTime: "7 min read",
+    url: "blog/en/web-development-professional-website-morocco.html"
+  },
+  {
+    id: 6,
+    title: "Custom vs. Template Websites: Which to Choose?",
+    excerpt: "Compare the benefits of custom websites versus templates to make the right decision.",
+    image: "assets/img/blog/tempvscustom.webp",
+    tag: "web-development",
+    date: "August 25, 2025",
+    readTime: "6 min read",
+    url: "blog/en/web-development-custom-vs-template-websites.html"
+  },
+
+  // My Expertise
+  {
+    id: 7,
+    title: "The Future of Web Development in Morocco",
+    excerpt: "Insights into where web development in Morocco is heading in the next few years.",
+    image: "assets/img/blog/future.webp",
+    tag: "my-expertise",
+    date: "August 27, 2025",
+    readTime: "7 min read",
+    url: "blog/en/web-development-future-morocco.html"
+  },
+  {
+    id: 8,
+    title: "How Professional Websites Build Trust in Morocco",
+    excerpt: "Why credibility online is crucial for Moroccan businesses and how websites help.",
+    image: "assets/img/blog/trust.webp",
+    tag: "my-expertise",
+    date: "August 30, 2025",
+    readTime: "6 min read",
+    url: "blog/en/web-development-trust-morocco.html"
+  },
+  {
+    id: 9,
+    title: "10 Common Website Mistakes in Morocco",
+    excerpt: "The top website mistakes I see Moroccan businesses make and how to fix them.",
+    image: "assets/img/blog/mistakes.webp",
+    tag: "my-expertise",
+    date: "September 2, 2025",
+    readTime: "8 min read",
+    url: "blog/en/Common-Website-Mistakes.html"
+  },
+
+  // SEO
+  {
+    id: 10,
+    title: "SEO Trends in Morocco 2025",
+    excerpt: "Stay ahead with the most effective SEO strategies for Moroccan businesses.",
+    image: "assets/img/blog/trends.webp",
+    tag: "seo",
+    date: "September 5, 2025",
+    readTime: "7 min read",
+    url: "blog/en/seo-web-development-trends-morocco.html"
+  },
+  {
+    id: 11,
+    title: "Mobile SEO: Why Apps & Sites Must Be Optimized",
+    excerpt: "Learn why mobile optimization is critical for SEO in Morocco today.",
+    image: "assets/img/blog/mobile app.webp",
+    tag: "seo",
+    date: "September 7, 2025",
+    readTime: "6 min read",
+    url: "blog/en/seo-mobile-apps-morocco.html"
+  },
+  {
+    id: 12,
+    title: "Local SEO in Tangier: A Complete Guide",
+    excerpt: "A full guide to ranking higher in local searches and attracting Tangier clients.",
+    image: "assets/img/blog/seo tanger.webp",
+    tag: "seo",
+    date: "September 10, 2025",
+    readTime: "8 min read",
+    url: "blog/en/seo-tangier-morocco.html"
+  }
+];
+
 
     // Function to render blog posts
     function renderBlogPosts(posts, page = 1, postsPerPage = 6) {
