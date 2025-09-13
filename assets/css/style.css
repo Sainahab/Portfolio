@@ -1703,6 +1703,7 @@ h4 {
         
         .blog-content {
             padding: 25px;
+            justify-content: center !important;
         }
         
         .blog-tag {
@@ -1814,10 +1815,25 @@ h4 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 89%;
+  height: 100%;
   background: rgba(0,0,0,0.5); /* black with 50% transparency */
 }
 
 .blog-wrapper{
   margin-top: -2rem !important;
 }
+
+        @media (max-width: 900px) {
+          .blog-hero{
+            height: 25vh !important;
+          }
+          .blog-header .blog-title{
+            font-size: 1rem !important;
+          }
+          .blog-content-tag, .sidebar-section{
+            text-align: center !important;
+          }
+          .sidebar-social, .sidebar-author{
+            justify-content: center !important;
+          }
+        }
