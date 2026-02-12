@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require __DIR__ . '/src/Exception.php';
-require __DIR__ . '/src/PHPMailer.php';
-require __DIR__ . '/src/SMTP.php';
+require __DIR__ . '/PHPMailer/src/Exception.php';
+require __DIR__ . '/PHPMailer/src/PHPMailer.php';
+require __DIR__ . '/PHPMailer/src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && !empty($_POST['email'])) {
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
@@ -17,20 +17,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !empty($_POST['email'])) {
     $mail = new PHPMailer(true);
     try {
         // SMTP settings
-        $mail->isSMTP();                                      // Set mailer to use SMTP
-            $mail->Host = gethostname();  // Specify main and backup SMTP servers
-            $mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $mail->Username = 'do_not_reply@sainahab.us';                 // SMTP username
-            $mail->Password = 'Saintahab123@';                            // SMTP password
-            $mail->SMTPSecure = 'ssl';                           // Enable TLS encryption, `ssl` also accepted
-            $mail->Port = 465;      
-            
+        $mail->isSMTP();
+        $mail->Host = 'smtp.hostinger.com';  // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;
+        $mail->Username = 'do_not_reply@sainahab.us';
+        $mail->Password = 'Saintahab123@';
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
 
-
-    //Recipients
-    $mail->setFrom('dev@sainahab.us', 'Portfolio subscribe Form');
-    //$mail->setFrom('Donot-reply@signworks.ma', 'Website Contact Form');
-    $mail->addAddress('Do_not-reply@sainahab.us');     // Add a recipient
+        //Recipients
+        $mail->setFrom('do_not_reply@sainahab.us', 'Portfolio subscribe Form');
+        $mail->addAddress('contact@sainahab.us');
 
         // Email content
         $mail->isHTML(true);

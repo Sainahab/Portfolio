@@ -1677,9 +1677,16 @@ h4 {
         
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1200px;
+            margin: 0 auto 50px;
             gap: 30px;
-            margin-bottom: 50px;
+        }
+        
+        @media (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         .blog-card {

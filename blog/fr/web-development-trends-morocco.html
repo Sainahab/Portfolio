@@ -545,7 +545,7 @@
         <div class="sidebar-section">
             <h4>À propos de l’auteur</h4>
             <div class="sidebar-author">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Yassine Ahab">
+                <img src="../../assets/img/selfie.webp" alt="Yassine Ahab">
                 <div class="sidebar-author-info">
                     <strong>Yassine Ahab</strong><br>
                     Développeur web senior et spécialiste IT basé au Maroc.
@@ -628,22 +628,22 @@
         });
         
         // Social sharing functions
-        document.querySelector('.social-btn.facebook').addEventListener('click', function(e) {
+        document.querySelector('.sidebar-social .facebook').addEventListener('click', function(e) {
             e.preventDefault();
             window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), 'facebook-share-dialog', 'width=626,height=436');
         });
         
-        document.querySelector('.social-btn.twitter').addEventListener('click', function(e) {
+        document.querySelector('.sidebar-social .twitter').addEventListener('click', function(e) {
             e.preventDefault();
             window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + '&url=' + encodeURIComponent(window.location.href), 'twitter-share-dialog', 'width=626,height=436');
         });
         
-        document.querySelector('.social-btn.linkedin').addEventListener('click', function(e) {
+        document.querySelector('.sidebar-social .linkedin').addEventListener('click', function(e) {
             e.preventDefault();
             window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(window.location.href) + '&title=' + encodeURIComponent(document.title), 'linkedin-share-dialog', 'width=626,height=436');
         });
         
-        document.querySelector('.social-btn.pinterest').addEventListener('click', function(e) {
+        document.querySelector('.sidebar-social .pinterest').addEventListener('click', function(e) {
             e.preventDefault();
             window.open('https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href) + '&media=' + encodeURIComponent(document.querySelector('.blog-hero-image').src) + '&description=' + encodeURIComponent(document.title), 'pinterest-share-dialog', 'width=626,height=436');
         });

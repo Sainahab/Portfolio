@@ -601,22 +601,22 @@
         });
         
         // Social sharing functions
-        document.querySelector('.social-btn.facebook').addEventListener('click', function(e) {
+        document.querySelector('.sidebar-social .facebook').addEventListener('click', function(e) {
             e.preventDefault();
             window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), 'facebook-share-dialog', 'width=626,height=436');
         });
         
-        document.querySelector('.social-btn.twitter').addEventListener('click', function(e) {
+        document.querySelector('.sidebar-social .twitter').addEventListener('click', function(e) {
             e.preventDefault();
             window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + '&url=' + encodeURIComponent(window.location.href), 'twitter-share-dialog', 'width=626,height=436');
         });
         
-        document.querySelector('.social-btn.linkedin').addEventListener('click', function(e) {
+        document.querySelector('.sidebar-social .linkedin').addEventListener('click', function(e) {
             e.preventDefault();
             window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(window.location.href) + '&title=' + encodeURIComponent(document.title), 'linkedin-share-dialog', 'width=626,height=436');
         });
         
-        document.querySelector('.social-btn.pinterest').addEventListener('click', function(e) {
+        document.querySelector('.sidebar-social .pinterest').addEventListener('click', function(e) {
             e.preventDefault();
             window.open('https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href) + '&media=' + encodeURIComponent(document.querySelector('.blog-hero-image').src) + '&description=' + encodeURIComponent(document.title), 'pinterest-share-dialog', 'width=626,height=436');
         });
