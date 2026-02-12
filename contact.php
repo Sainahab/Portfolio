@@ -6,6 +6,40 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
+// Google reCAPTCHA v3 verification
+$recaptcha_secret = '6LdSRGksAAAAAO-jlBub0NvXUTBbIvlMZYsYHHBV';
+$recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
+
+$recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+$recaptcha_data = array(
+    'secret' => $recaptcha_secret,
+    'response' => $recaptcha_response
+);
+
+$recaptcha_options = array(
+    'http' => array(
+        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+        'method'  => 'POST',
+        'content' => http_build_query($recaptcha_data)
+    )
+);
+
+$recaptcha_context  = stream_context_create($recaptcha_options);
+$recaptcha_result = file_get_contents($recaptcha_url, false, $recaptcha_context);
+$recaptcha_json = json_decode($recaptcha_result, true);
+
+// Check if reCAPTCHA is successful
+if (!$recaptcha_json['success'] || $recaptcha_json['score'] < 0.5) {
+    $responseArray = array('type' => 'danger', 'message' => 'reCAPTCHA verification failed. Please try again.');
+    if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+        header('Content-Type: application/json');
+        echo json_encode($responseArray);
+    } else {
+        echo $responseArray['message'];
+    }
+    exit;
+}
+
 $body = $_POST['message'];
 $name = $_POST['name'];
 $email = $_POST['email'];

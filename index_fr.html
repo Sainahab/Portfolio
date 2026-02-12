@@ -25,6 +25,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <!-- Google reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdSRGksAAAAAFaNCGnPF6Ya5pKSQufvOrTusYkn"></script>
+    <script>
+    function onSubmit(token) {
+        document.getElementById('contact-form').submit();
+    }
+    </script>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRFQJN4SK4"></script>
     <script>
@@ -1118,7 +1126,7 @@
                         <textarea id="form_message" name="message" class="form-control" placeholder="Message pour moi *" rows="7" required="required" data-error="Please, leave us a message."></textarea>
                         <div class="help-block with-errors"></div>
                     </div>
-                    <button class="btn disabled" type="submit" name="submit">Envoyer le message <i class="fas fa-paper-plane"></i></button>
+                    <button class="btn disabled g-recaptcha" type="submit" name="submit" data-sitekey="YOUR_RECAPTCHA_SITE_KEY" data-callback='onSubmit' data-action='submit'>Envoyer le message <i class="fas fa-paper-plane"></i></button>
                     <div class="messages"></div>
                  </form>
              </div>
@@ -1136,7 +1144,7 @@
          </div>
          <div class="hr"></div>
          <div class="footer-copyright group">
-            <p>©2025 By Yassine Ahab. All Rights Reserved.</p>
+            <p>©2026 By Yassine Ahab. All Rights Reserved.</p>
         </div>
          <div class="hr"></div>
          <div class="follow group">
