@@ -128,17 +128,17 @@
 //     }
 // });
 //Navigation Bar Effects On Scroll
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
 
-});    
+});
 
 //Services Section - Modal
 const serviceModals = document.querySelectorAll(".service-modal");
 const learnmoreBtns = document.querySelectorAll(".learn-more-btn");
 const modalCloseBtns = document.querySelectorAll(".modal-close-btn");
 
-var modal = function(modalClick){
+var modal = function (modalClick) {
     serviceModals[modalClick].classList.add("active");
 }
 
@@ -166,14 +166,14 @@ var swiper = new Swiper(".client-swiper", {
     spaceBetween: 30,
     loop: true,
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
-  });
+});
 
 
 //Website dark/light theme
@@ -193,7 +193,7 @@ const getCurrentIcon = () => themeBtn.classList.contains("sun") ? "sun" : "moon"
 const savedTheme = localStorage.getItem("saved-theme");
 const savedIcon = localStorage.getItem("saved-icon");
 
-if(savedTheme){
+if (savedTheme) {
     document.body.classList[savedTheme === "dark" ? "add" : "remove"]("dark-theme");
     themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("sun");
 }
@@ -201,7 +201,7 @@ if(savedTheme){
 //Scroll To Top Button
 const scrollToTopBtn = document.querySelector(".scrollToTop-btn");
 
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
     scrollToTopBtn.classList.toggle("active", window.scrollY > 500)
 });
 
@@ -223,77 +223,77 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // --- Main Filter Logic --- 
-// --- Main Filter Logic --- 
-mainFilters.forEach(filter => {
-    filter.addEventListener("click", function(e) {
-        e.preventDefault();
-        const filterValue = this.getAttribute("data-filter");
-        let effectiveFilterValue = filterValue;
+        // --- Main Filter Logic --- 
+        mainFilters.forEach(filter => {
+            filter.addEventListener("click", function (e) {
+                e.preventDefault();
+                const filterValue = this.getAttribute("data-filter");
+                let effectiveFilterValue = filterValue;
 
-        // 1. Update active state
-        mainFilters.forEach(f => f.classList.remove("filter-active"));
-        this.classList.add("filter-active");
+                // 1. Update active state
+                mainFilters.forEach(f => f.classList.remove("filter-active"));
+                this.classList.add("filter-active");
 
-        // 2. Manage Sub-filter Visibility
-        if (subFiltersContainer) {
-            // Show only sub-filters for selected parent
-            const matchingSubFilters = Array.from(subFilters)
-                .filter(sf => sf.dataset.parent === filterValue);
+                // 2. Manage Sub-filter Visibility
+                if (subFiltersContainer) {
+                    // Show only sub-filters for selected parent
+                    const matchingSubFilters = Array.from(subFilters)
+                        .filter(sf => sf.dataset.parent === filterValue);
 
-            if (matchingSubFilters.length > 0) {
-                subFiltersContainer.style.display = "block";
+                    if (matchingSubFilters.length > 0) {
+                        subFiltersContainer.style.display = "block";
 
-                // Hide unrelated sub-filters
-                subFilters.forEach(sf => {
-                    sf.style.display = (sf.dataset.parent === filterValue) ? "inline-block" : "none";
-                    sf.classList.remove("filter-active");
-                });
+                        // Hide unrelated sub-filters
+                        subFilters.forEach(sf => {
+                            sf.style.display = (sf.dataset.parent === filterValue) ? "inline-block" : "none";
+                            sf.classList.remove("filter-active");
+                        });
 
-                // If there was an active sub-filter for this parent, use it
-                const activeSubFilter = matchingSubFilters.find(sf => sf.classList.contains("filter-active"));
-                if (activeSubFilter) {
-                    effectiveFilterValue = filterValue + activeSubFilter.getAttribute("data-filter");
+                        // If there was an active sub-filter for this parent, use it
+                        const activeSubFilter = matchingSubFilters.find(sf => sf.classList.contains("filter-active"));
+                        if (activeSubFilter) {
+                            effectiveFilterValue = filterValue + activeSubFilter.getAttribute("data-filter");
+                        }
+
+                    } else {
+                        subFiltersContainer.style.display = "none";
+                        subFilters.forEach(sf => sf.classList.remove("filter-active"));
+                    }
                 }
 
-            } else {
-                subFiltersContainer.style.display = "none";
-                subFilters.forEach(sf => sf.classList.remove("filter-active"));
-            }
-        }
-
-        // 3. Filter Portfolio Items
-        if (portfolioIsotope) {
-            portfolioIsotope.arrange({ filter: effectiveFilterValue });
-            portfolioIsotope.on("arrangeComplete", () => { try { AOS.refresh(); } catch(e) {} });
-        }
-    });
-});
-
-// --- Sub-Filter Logic --- 
-if (subFiltersContainer) {
-    subFilters.forEach(subFilter => {
-        subFilter.addEventListener("click", function(event) {
-            event.preventDefault();
-            event.stopPropagation(); 
-            const parentFilter = this.dataset.parent;
-            const subFilterValue = this.getAttribute("data-filter");
-            const combinedFilterValue = parentFilter + subFilterValue;
-
-            // 1. Update active states
-            subFilters.forEach(sf => sf.classList.remove("filter-active"));
-            this.classList.add("filter-active");
-            mainFilters.forEach(f => f.classList.remove("filter-active"));
-            const parentLi = document.querySelector(`#portfolio-flters li[data-filter="${parentFilter}"]`);
-            if (parentLi) parentLi.classList.add("filter-active");
-
-            // 2. Filter items
-            if (portfolioIsotope) {
-                portfolioIsotope.arrange({ filter: combinedFilterValue });
-                portfolioIsotope.on("arrangeComplete", () => { try { AOS.refresh(); } catch(e) {} });
-            }
+                // 3. Filter Portfolio Items
+                if (portfolioIsotope) {
+                    portfolioIsotope.arrange({ filter: effectiveFilterValue });
+                    portfolioIsotope.on("arrangeComplete", () => { try { AOS.refresh(); } catch (e) { } });
+                }
+            });
         });
-    });
-}
+
+        // --- Sub-Filter Logic --- 
+        if (subFiltersContainer) {
+            subFilters.forEach(subFilter => {
+                subFilter.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    const parentFilter = this.dataset.parent;
+                    const subFilterValue = this.getAttribute("data-filter");
+                    const combinedFilterValue = parentFilter + subFilterValue;
+
+                    // 1. Update active states
+                    subFilters.forEach(sf => sf.classList.remove("filter-active"));
+                    this.classList.add("filter-active");
+                    mainFilters.forEach(f => f.classList.remove("filter-active"));
+                    const parentLi = document.querySelector(`#portfolio-flters li[data-filter="${parentFilter}"]`);
+                    if (parentLi) parentLi.classList.add("filter-active");
+
+                    // 2. Filter items
+                    if (portfolioIsotope) {
+                        portfolioIsotope.arrange({ filter: combinedFilterValue });
+                        portfolioIsotope.on("arrangeComplete", () => { try { AOS.refresh(); } catch (e) { } });
+                    }
+                });
+            });
+        }
 
 
         // Trigger click on "All" filter initially
@@ -322,10 +322,10 @@ window.addEventListener("scroll", () => {
         let sectionTop = current.offsetTop - 50;
         let id = current.getAttribute("id");
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             document.querySelector(".nav-items a[href*=" + id + "]").classList.add("active");
         }
-        else{
+        else {
             document.querySelector(".nav-items a[href*=" + id + "]").classList.remove("active");
         }
     });
@@ -359,11 +359,82 @@ document.addEventListener("click", (event) => {
     }
 });
 
-document.querySelector('.scroll-down').addEventListener('click', function(event) {
+document.querySelector('.scroll-down').addEventListener('click', function (event) {
     event.preventDefault(); // prevent jumping to #clients
     window.scrollBy({
         top: 500,  // scroll down by 100px
         left: 0,
         behavior: 'smooth'
     });
+});
+
+/*======= Latest Project Popup Logic =======*/
+document.addEventListener("DOMContentLoaded", () => {
+    // Generate overlay dynamically
+    const overlay = document.createElement("div");
+    overlay.className = "project-popup-overlay";
+    document.body.appendChild(overlay);
+
+    const popup = document.getElementById("latest-project-popup");
+    const closeBtn = document.getElementById("close-project-popup");
+    const popupProjectLink = document.getElementById("popup-project-link");
+    const portfolioSection = document.getElementById("portfolio");
+
+    if (!popup || !portfolioSection) return;
+
+    let isDismissed = false;
+
+    window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        const portfolioOffset = portfolioSection.offsetTop;
+
+        // Show popup when scrolled 100px into the portfolio section
+        if (scrollPosition > portfolioOffset + 100) {
+            // Only show if not explicitly dismissed during this scroll into the section
+            if (!popup.classList.contains("active") && !isDismissed) {
+                popup.classList.add("active");
+                overlay.classList.add("active");
+                document.body.style.overflow = "hidden"; // Prevent background scrolling
+            }
+        } else {
+            // If scrolling back up past the trigger point, hide it 
+            // and reset the dismissed state so it can appear again when scrolling down
+            if (popup.classList.contains("active")) {
+                popup.classList.remove("active");
+                overlay.classList.remove("active");
+                document.body.style.overflow = "";
+            }
+            isDismissed = false;
+        }
+    });
+
+    const closePopup = () => {
+        popup.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.style.overflow = "";
+        isDismissed = true;
+    };
+
+    if (closeBtn) closeBtn.addEventListener("click", closePopup);
+    overlay.addEventListener("click", closePopup);
+
+    // Simulate clicking the "see more" button for the latest project
+    if (popupProjectLink) {
+        popupProjectLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            closePopup(); // hide the popup
+
+            // Find the tamimi link in the portfolio and click it to open the lightbox
+            const latestProjectLink = document.querySelector('a[href="assets/img/portfolio/tamimi2.webp"].portfolio-lightbox');
+            if (latestProjectLink) {
+                // We add a tiny delay to ensure the popup closing animation starts smoothly
+                setTimeout(() => {
+                    latestProjectLink.click();
+                }, 100);
+            } else {
+                // Fallback: just scroll to portfolio if the link isn't found
+                window.location.hash = "#portfolio";
+            }
+        });
+    }
 });
